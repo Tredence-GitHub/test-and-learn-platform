@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>TALP</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> </script>
+  <script src="js/custom.js"> </script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <div class="header">
+    <a href="index.html" class="logo"><img src="images/logo-dark.png" height="70"></a>
+    <div class="header-right">
+      <a href="#" class="avatar"> <span><img src="images/avatar.jpg" alt="avatar"></span> </a>
+    </div>
+  </div>
+
+
+  <section class="py-5 px-3 overlaphead">
+    <div class="container-fluid pt-4 px-5">
+     
+        
+      <div class="row">
+        <div class="col-md-4 p-0">
+          <header class="text-center active">
+          <h1 class="display-4 m-0">Design</h1>
+        </header>
+          </div>
+          <div class="col-md-4 p-0">
+            <header class="text-center">
+            <h1 class="display-4 m-0">Measure</h1>
+          </header>
+            </div>
+            <div class="col-md-4 p-0">
+              <header class="text-center">
+              <h1 class="display-4 m-0">Learn</h1>
+            </header>
+              </div>
+          </div>
+        
+    
+
+
+      <div class="row tab-section">
+            <div class="col-md-3">
+                <!-- Tabs nav -->
+                <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link mb-3 p-3 shadow active" id="v-pills-first-tab" data-toggle="pill" href="#v-pills-first" role="tab" aria-controls="v-pills-first" aria-selected="true">
+                      <i class="fa fa-list-ul  mr-2"></i>
+                      <span class=" small text-uppercase">Tell us more about the test</span></a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="v-pills-second-tab" data-toggle="pill" href="#v-pills-second" role="tab" aria-controls="v-pills-second" aria-selected="false">
+                      <i class="fa fa-check-square-o mr-2"></i>
+                      <span class=" small text-uppercase">
+                        Finalize no. of test stores
+                        </span></a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="v-pills-third-tab" data-toggle="pill" href="#v-pills-third" role="tab" aria-controls="v-pills-third" aria-selected="false">
+                      <i class="fa fa-search mr-2"></i>
+                      <span class=" small text-uppercase">
+                        Identify stores to test</span></a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="v-pills-fourth-tab" data-toggle="pill" href="#v-pills-fourth" role="tab" aria-controls="v-pills-fourth" aria-selected="false">
+                      <i class="fa fa-bookmark-o mr-2"></i>
+                      <span class=" small text-uppercase">Identify Control Stores
+                      </span></a>
+                    </div>
+            </div>
+
+
+            <div class="col-md-9">
+              <form>
+                <!-- Tabs content -->
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade shadow rounded show active" id="v-pills-first" role="tabpanel" aria-labelledby="v-pills-first-tab">
+                     
+                        <div class="form-group">
+                        <label>Select Test Level <span class="tooltip">?
+                          <span class="tooltiptext">Test and learn gives you the option to conduct test on site level or customer level.
+                          </span>
+                        </span></label>
+                        <select class="form-control">
+                          <option value="site">Site</option>
+                          <option value="customer">Customer</option>
+                        </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label>Enter Test Name <span class="tooltip">?
+                            <span class="tooltiptext">Enter a name for your test that you would later like to  refer to.</span>
+                          </span> </label>
+                          <input type="text" value="TAAS Service" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label>What is the hypothesis that you want to test
+                              <span class="tooltip">?
+                              <span class="tooltiptext">Enter underline hypothesis associated with the test.
+                                Ex-Introducing TAAS as service will help increase the earning of spark drivers.</span>
+                            </span></label>
+                            <input class="form-control" type="text" value="Introduction of TAAS as service will help increase the earning of spark driver">
+                            </div>
+                            <div class="form-group">
+                              <label>Setup your business goal
+                                <span class="tooltip">?
+                                <span class="tooltiptext">Enter/Select  what business goal you want to set up for the  current test. Ex-  Increment in driver earning.
+                                </span>
+                              </span> </label>
+                              <select class="form-control">
+                                <option value="Increment in Driver Earning">Increment in Driver Earning</option>
+                              </select>
+                              </div>
+                              <div class="form-group">
+                                <label>Select Test Type
+                                  <span class="tooltip">?
+                                  <span class="tooltiptext">Enter/Select the type of  test for categorising your test.
+                                    Ex-Driver Engagement
+                                    </span>
+                                </span></label>
+                                <select class="form-control">
+                                  <option value="New Product Launch">Driver Engagement</option>
+                                </select>
+                                </div>
+                                <div class="form-group">
+                                  <label>Enter Benefit that is being offered
+                                    <span class="tooltip">?
+                                    <span class="tooltiptext">Enter/Select benefit that is being offered to the drivers for the current test. Ex-Appropriate monetary compensation for TAAS services. 
+                                    </span>
+                                  </span> </label>
+                                  <select class="form-control">
+                                    <option value="">Search or Enter new</option>
+                                  </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label>Select Primary Metric that you want to measure
+                                      <span class="tooltip">?
+                                      <span class="tooltiptext">Test & Learn recommends choosing the metric that relates most directly to the primary measure of success for your campaign. Ex- Driver retention.
+                                      </span>
+                                    </span></label>
+                                    <select class="form-control">
+                                      <option value="">Spark Driver delivered Percent</option>
+                                    </select>
+                                    </div>
+                                    <div class="form-group">
+                                      <label>How do you want to proceed?
+                                        <span class="tooltip">?
+                                        <span class="tooltiptext">Test and learn gives you an option to select how you want tot proceed further. You can directly proceed to control store selection if you already have your test store list.
+                                        </span>
+                                      </span> </label>
+                                      <br/>
+                                     
+                
+                                      <p>
+                                        <input type="radio" id="testandcontrol" name="proceed" value="Select Test and Control Stores">
+                                        <label for="testandcontrol">Select Test and Control Stores</label>
+                                      </p>
+                                      <p>
+                                        <input type="radio" id="control" name="proceed" value="Select Control Stores">
+                                        <label for="control">Select Control Stores <u>Upload list of test stores
+                                        </u></label>
+                                      </p>
+                                      </div>
+                
+                          <div class="btn-group">
+                            <button  type="submit" value="Next"> Next </button>
+                            <button  type="button" value="Save as Draft">  Save as Draft </button>
+                          
+                        </div>
+
+                  
+                    </div>
+                    
+                    <div class="tab-pane fade shadow rounded" id="v-pills-second" role="tabpanel" aria-labelledby="v-pills-second-tab">
+                      <div class="form-group">
+                        <label>Enter Test Date<span class="tooltip">?
+                          <span class="tooltiptext">Test and learn gives you the option to conduct test on site level or customer level.
+                          </span>
+                        </span></label>
+                        <!-- Date Picker Input -->
+            <div class="form-group">
+              <div class="datepicker date input-group p-0 shadow-sm  mb-0">
+                  <input type="text" placeholder="Choose a date" class="form-control" id="reservationDate">
+                  <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
+              </div>
+          </div><!-- DEnd ate Picker Input -->
+                        </div>
+
+                        <div class="form-group">
+                          <label>Enter Test Duration<span class="tooltip">?
+                            <span class="tooltiptext">Enter a name for your test that you would later like to  refer to.</span>
+                          </span> </label>
+                          <div class="row">
+                            <div class="col-md-2">
+                              <input type="number" value="14" class="form-control">
+                              </div>
+                              <div class="col-md-3">
+                                <select class="form-control">
+                                  <option value="days">Days</option>
+                                  <option value="month">Month</option>
+                                </select>
+                              </div>
+                          </div>
+                          </div>
+                        
+                                  <div class="form-group">
+                                    <label>Do you want us to recommend number of stores you want to test in?
+                                      <span class="tooltip">?
+                                      <span class="tooltiptext">Test & Learn recommends choosing the metric that relates most directly to the primary measure of success for your campaign. Ex- Driver retention.
+                                      </span>
+                                    </span></label>
+                                    <p>
+                                      <input type="radio" id="yes" name="recommendnumber" value="Yes">
+                                      <label for="yes">Yes</label>
+                                   
+                                      <input type="radio" id="no" name="recommendnumber" value="No">
+                                      <label for="no">No</label>
+                                    </p>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label>Do you want select your test stores from the entire pool of stores?
+                                        <span class="tooltip">?
+                                        <span class="tooltiptext">Test and learn gives you an option to select how you want tot proceed further. You can directly proceed to control store selection if you already have your test store list.
+                                        </span>
+                                      </span> </label>
+                                      <br/>
+                                     
+                
+                                      <p>
+                                        <input type="radio" id="option1" name="stores" value="Select Test and Control Stores">
+                                        <label for="option1">Yes, Include all stores</label>
+                                     
+                                        <input type="radio" id="option2" name="stores" value="Select Control Stores">
+                                        <label for="option2">Select Control Stores </label>
+
+                                        <input type="radio" id="option3" name="stores" value="Select Control Stores">
+                                        <label for="option3">Upload CSV </label>
+                                      </p>
+                                      </div>
+                
+                                      <div class="form-group">
+                                        <label>Set expected incremental value of primary metric
+                                          <span class="tooltip">?
+                                          <span class="tooltiptext">Test & Learn recommends choosing the metric that relates most directly to the primary measure of success for your campaign. Ex- Driver retention.
+                                          </span>
+                                        </span></label>
+                                        <div class="rangeSlider">
+                                          <input type="range" class="circleRange" min="0" max="100" value="100">
+                                      </div>
+                                      <div class="value"></div>
+                                        </div>
+
+
+                          <div class="btn-group">
+                            <button  type="submit" value="Next"> Next </button>
+                            <button  type="button" value="Save as Draft">  Save as Draft </button>
+                          
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade shadow rounded" id="v-pills-third" role="tabpanel" aria-labelledby="v-pills-third-tab">
+                       c
+                    </div>
+                    
+                    <div class="tab-pane fade shadow rounded" id="v-pills-fourth" role="tabpanel" aria-labelledby="v-pills-fourth-tab">
+                       d
+                    </div>
+                </div>
+
+              </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
