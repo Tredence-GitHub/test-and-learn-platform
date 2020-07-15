@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery.range.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/custom.css">
 
@@ -31,7 +32,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> </script>
+  <script src="js/jquery.range.js"> </script>
   <script src="js/custom.js"> </script>
+  
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -83,17 +86,18 @@
                     <a class="nav-link mb-3 p-3 shadow" id="v-pills-second-tab" data-toggle="pill" href="#v-pills-second" role="tab" aria-controls="v-pills-second" aria-selected="false">
                       <i class="fa fa-check-square-o mr-2"></i>
                       <span class=" small text-uppercase">
-                        Finalize no. of test stores
+                        Estimating sample size
                         </span></a>
 
                     <a class="nav-link mb-3 p-3 shadow" id="v-pills-third-tab" data-toggle="pill" href="#v-pills-third" role="tab" aria-controls="v-pills-third" aria-selected="false">
                       <i class="fa fa-search mr-2"></i>
                       <span class=" small text-uppercase">
-                        Identify stores to test</span></a>
+                        Identify zones to test
+                       </span></a>
 
                     <a class="nav-link mb-3 p-3 shadow" id="v-pills-fourth-tab" data-toggle="pill" href="#v-pills-fourth" role="tab" aria-controls="v-pills-fourth" aria-selected="false">
                       <i class="fa fa-bookmark-o mr-2"></i>
-                      <span class=" small text-uppercase">Identify Control Stores
+                      <span class=" small text-uppercase">Identify Control zones
                       </span></a>
                     </div>
             </div>
@@ -111,7 +115,7 @@
                           </span>
                         </span></label>
                         <select class="form-control">
-                          <option value="site">Site</option>
+                          <option value="site">Spark Zone</option>
                           <option value="customer">Customer</option>
                         </select>
                         </div>
@@ -122,14 +126,7 @@
                           </span> </label>
                           <input type="text" value="TAAS Service" class="form-control">
                           </div>
-                          <div class="form-group">
-                            <label>What is the hypothesis that you want to test
-                              <span class="tooltip">?
-                              <span class="tooltiptext">Enter underline hypothesis associated with the test.
-                                Ex-Introducing TAAS as service will help increase the earning of spark drivers.</span>
-                            </span></label>
-                            <input class="form-control" type="text" value="Introduction of TAAS as service will help increase the earning of spark driver">
-                            </div>
+                       
                             <div class="form-group">
                               <label>Setup your business goal
                                 <span class="tooltip">?
@@ -151,16 +148,6 @@
                                   <option value="New Product Launch">Driver Engagement</option>
                                 </select>
                                 </div>
-                                <div class="form-group">
-                                  <label>Enter Benefit that is being offered
-                                    <span class="tooltip">?
-                                    <span class="tooltiptext">Enter/Select benefit that is being offered to the drivers for the current test. Ex-Appropriate monetary compensation for TAAS services. 
-                                    </span>
-                                  </span> </label>
-                                  <select class="form-control">
-                                    <option value="">Search or Enter new</option>
-                                  </select>
-                                  </div>
                                   <div class="form-group">
                                     <label>Select Primary Metric that you want to measure
                                       <span class="tooltip">?
@@ -182,12 +169,15 @@
                 
                                       <p>
                                         <input type="radio" id="testandcontrol" name="proceed" value="Select Test and Control Stores">
-                                        <label for="testandcontrol">Select Test and Control Stores</label>
+                                        <label for="testandcontrol">Select Test and Control Zones</label>
                                       </p>
+                                      <p class="mb-1 small">Select Control Zones</p>
                                       <p>
-                                        <input type="radio" id="control" name="proceed" value="Select Control Stores">
-                                        <label for="control">Select Control Stores <u>Upload list of test stores
-                                        </u></label>
+                                        <input type="radio" id="pastecontrol" name="proceedcontrol" value="Paste list of test zones">
+                                        <label for="pastecontrol"> Paste  list of test zones </label>
+                                      
+                                        <input type="radio" id="selectcontrol" name="proceedcontrol" value="Select zones from List">
+                                        <label for="selectcontrol">Select zones from List</label>
                                       </p>
                                       </div>
                 
@@ -239,49 +229,106 @@
                                       </span>
                                     </span></label>
                                     <p>
-                                      <input type="radio" id="yes" name="recommendnumber" value="Yes">
+                                      <input type="radio" id="yes" name="recommendnumber" checked value="1">
                                       <label for="yes">Yes</label>
                                    
-                                      <input type="radio" id="no" name="recommendnumber" value="No">
+                                      <input type="radio" id="no" name="recommendnumber" value="2">
                                       <label for="no">No</label>
                                     </p>
                                     </div>
+<div class="recommendnumber" id="hide-1" style="display: block;">
+  <div class="form-group">
+    <label>Do you want select your test stores from the entire pool of stores?
+      <span class="tooltip">?
+      <span class="tooltiptext">Test and learn gives you an option to select how you want tot proceed further. You can directly proceed to control store selection if you already have your test store list.
+      </span>
+    </span> </label>
+    <br/>
+   
 
-                                    <div class="form-group">
-                                      <label>Do you want select your test stores from the entire pool of stores?
-                                        <span class="tooltip">?
-                                        <span class="tooltiptext">Test and learn gives you an option to select how you want tot proceed further. You can directly proceed to control store selection if you already have your test store list.
-                                        </span>
-                                      </span> </label>
-                                      <br/>
-                                     
-                
-                                      <p>
-                                        <input type="radio" id="option1" name="stores" value="Select Test and Control Stores">
-                                        <label for="option1">Yes, Include all stores</label>
-                                     
-                                        <input type="radio" id="option2" name="stores" value="Select Control Stores">
-                                        <label for="option2">Select Control Stores </label>
+    <p>
+      <input type="radio" id="option1" name="stores" checked value="Select Test and Control Stores">
+      <label for="option1">Yes, Include all stores</label>
+   
+      <input type="radio" id="option2" name="stores" value="Select Control Stores">
+      <label for="option2">Select Control Stores </label>
 
-                                        <input type="radio" id="option3" name="stores" value="Select Control Stores">
-                                        <label for="option3">Upload CSV </label>
-                                      </p>
-                                      </div>
-                
-                                      <div class="form-group">
-                                        <label>Set expected incremental value of primary metric
-                                          <span class="tooltip">?
-                                          <span class="tooltiptext">Test & Learn recommends choosing the metric that relates most directly to the primary measure of success for your campaign. Ex- Driver retention.
-                                          </span>
-                                        </span></label>
-                                        <div class="rangeSlider">
-                                          <input type="range" class="circleRange" min="0" max="100" value="100">
-                                      </div>
-                                      <div class="value"></div>
-                                        </div>
+      <input type="radio" id="option3" name="stores" value="Select Control Stores">
+      <label for="option3">Upload CSV </label>
+    </p>
+    </div>
 
+    <div class="form-group">
+      <label>Set expected incremental value of primary metric
+        <span class="tooltip">?
+        <span class="tooltiptext">Test & Learn recommends choosing the metric that relates most directly to the primary measure of success for your campaign. Ex- Driver retention.
+        </span>
+      </span></label>
+      
+      <input class="single-slider" type="hidden" value="0"/>
+  
+      </div>
 
-                          <div class="btn-group">
+      <div class="form-group">
+        <label>Set Confidence Level and Power Level
+          <span class="tooltip">?
+          <span class="tooltiptext">Enter a name for your test that you would later like to  refer to.</span>
+        </span> </label>
+        <div class="row">
+          <div class="col-md-2 text-center">
+            <input type="text" value="0" class="form-control mb-0">
+            <span>Set Confidence Level
+              <pre>(recommended – 95%)</pre>
+            </span>
+            </div>
+            <div class="col-md-2 text-center">
+              <input type="text" value="0" class="form-control mb-0">
+              <span>Power Level
+                <pre>(recommended – 80%)</pre>
+              </span>
+            </div>
+        </div>
+        </div>
+
+        <div class="form-group">
+        <u id="enableexpectedearnings">Click here to get the number of test zones</u>
+      </div>
+       
+      <div class="expectedearnings" style="display: none;">
+        <span class="infodata">Expected Incremental Earnings : <span>$36</span></span>
+        
+        <div class="form-group">
+        <ul class="chart">
+          <li>
+            <span style="height:90%" title="Zone1"></span>
+          </li>
+          <li>
+            <span style="height:30%" title="Zone2"></span>
+          </li>
+          <li>
+            <span style="height:50%" title="Zone3"></span>
+          </li>
+          <li>
+            <span style="height:75%" title="Zone4"></span>
+          </li>
+        </ul>    
+        </div>
+      </div>
+
+</div>
+<div class="recommendnumber" id="hide-2" style="display: none;">
+  <label>Sample Size needed for test <span class="tooltip">?
+    <span class="tooltiptext">Enter a name for your test that you would later like to  refer to.</span>
+  </span> </label>
+  <div class="row">
+    <div class="col-md-2">
+      <input type="number" value="0" class="form-control">
+      </div>
+  </div>
+                                        
+  </div>
+
+                          <div class="btn-group w100">
                             <button  type="submit" value="Next"> Next </button>
                             <button  type="button" value="Save as Draft">  Save as Draft </button>
                           
