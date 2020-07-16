@@ -2,7 +2,9 @@ body {
     background-color: #22313a;
     color: #ffe2c0;
 }
-
+:focus{
+  outline: none;
+}
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
@@ -12,7 +14,9 @@ body {
 .section-description {
   margin-bottom: 1.2rem;
 }
-
+.dark-bg{
+  background-color: #2b3c46;
+}
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .overlaphead{
@@ -145,7 +149,6 @@ label u{
 form .form-control {
   display: block;
   width: 100%;
-  height: 38px;
   padding: .375rem .75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -189,6 +192,12 @@ form .infodata{
 }
 form .infodata span{
   color: #ffca7d;
+}
+input.multiselect-search::-webkit-input-placeholder,
+input#reservationDate::-webkit-input-placeholder
+{
+  font-size: 14px;
+  color:#7f581e;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 14px;
@@ -262,8 +271,9 @@ input[type=text], input[type=number], select {
   margin: 2px 0;
   box-sizing: border-box;
   font-size: 14px;
+  height: 38px;
 }
-input:focus, select:focus {
+input:focus, select:focus, .btn-outline-theme:hover, .btn-outline-theme:focus, .btn-outline-theme:active {
   color: #ffd79e !important;
   border-color: #ffa828 !important;
   outline: none !important;
@@ -402,7 +412,7 @@ button:focus{
   margin:2px -1px 0;
 }
 .datepicker input[type=text] + div span{
-  color: #ffffff;
+  color: #ffe2c0;
   background-color: #7f581e;
   border: 1px solid #7f581e;
 }
@@ -431,6 +441,49 @@ button:focus{
   color: #ffffff !important;
   padding: 4px;
   margin: 0 -3px;
+}
+.dropdown ul button, .dropdown ul button:hover, .dropdown ul button:focus, .dropdown ul button:active{
+    color: #ffe2c0;
+    background-color: #7f581e;
+    border: 1px solid #7f581e;
+    margin: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+}
+.dropdown .dropdown-item:focus, .dropdown .dropdown-item:hover, .dropdown-item:active {
+  background-color: #1e2a313b;
+  outline: none;
+}
+.samplecalc{
+  padding: 12px 12px;
+  border: 1px dashed #7f581e;
+  border-radius: .25rem;
+  margin: 0 0 30px;
+}
+.sample-list{
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+.zone-icon{
+    background: #c9802a;
+    border-radius: 50%;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    color: #ffe2c0;
+    font-size: 20px;
+    align-self: center;
+}
+.zone-info{
+  display: inline-block;
+  padding: 0 10px;
+}
+.zone-info label, .zone-info p{
+  margin: 0;
+  color: #ffca7d;
 }
 
 .chart {
@@ -478,4 +531,38 @@ button:focus{
 
 .w100{
   width: 100%;
+}
+.btn-outline-theme {
+  color: #ffca7d;
+  border-color: #7f581e;
+}
+.btn-outline-theme .fa{
+  font-size: 16px;
+  font-weight: bold;
+  float: right;
+  line-height: 1.5;
+}
+.btn-outline-theme::after{
+  display: none;
+}
+label{
+  color: #ffe2c0 !important;
+  font-weight: 400 !important;
+}
+.table-theme thead{
+  background: #1e2a31;
+}
+.table-theme thead th, .table-theme td{
+  border-color: #7f581e;
+  color: #ffca7d;
+  font-weight: 400;
+  vertical-align: middle;
+}
+.table-theme thead th{
+  color: #ffe2c0 
+}
+.table-theme input[type=text], .table-theme input[type=number], .table-theme select
+{
+  width: auto;
+  margin: 0 auto;
 }
