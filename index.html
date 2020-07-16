@@ -78,7 +78,7 @@
   <body>
     <div class="header">
       <a href="index.html" class="logo"
-        ><img src="images/logo-dark.png" height="70"
+        ><img src="images/logo-dark.png" 
       /></a>
       <div class="header-right">
         <a href="#" class="avatar">
@@ -87,9 +87,9 @@
       </div>
     </div>
 
-    <section class="py-5 px-3 overlaphead">
-      <div class="container-fluid pt-4 px-5">
-        <div class="row">
+    <section class="container-fluid  overlaphead">
+       
+        <div class="row" style='display:none;'>
           <div class="col-md-4 p-0">
             <header class="text-center active">
               <h1 class="display-4 m-0">Design</h1>
@@ -108,7 +108,11 @@
         </div>
 
         <div class="row tab-section">
-          <div class="col-md-3">
+          <div class="col-md-3  left-nav-bar">
+		    <div class='nav-title'>
+					<div>Design</div>
+					<div class="desc">Design Your New Experiment</div>
+				</div>
             <!-- Tabs nav -->
             <div
               class="nav flex-column nav-pills nav-pills-custom"
@@ -178,16 +182,27 @@
             </div>
           </div>
 
-          <div class="col-md-9">
+           <div class="col-md-12 tab-content-area">
+			  
+               
             <form>
               <!-- Tabs content -->
-              <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-content" id="v-pills-tabContent" style='margin-top: 54px;'>
+			  
                 <div
                   class="tab-pane fade shadow rounded show active"
                   id="v-pills-first"
                   role="tabpanel"
                   aria-labelledby="v-pills-first-tab"
                 >
+				<div class="tab-title-bar">
+			    <i class="fa fa-list-ul mr-2 icon-container"></i>
+				<div class='tab-title'>Tell Us More About Your Test</div>
+				<div class='tab-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+				<div class="progress-bar">
+					<div class="progress-step"></div>
+				</div>
+			  </div>
                   <div class="form-group">
                     <label
                       >Select Test Level
@@ -335,6 +350,15 @@
                   role="tabpanel"
                   aria-labelledby="v-pills-second-tab"
                 >
+				 <div class="tab-title-bar">
+			    <i class="fa fa-check-square-o mr-2 icon-container"></i>
+				<div class="tab-title">
+                  Estimating sample size                </div>
+				<div class="tab-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+				<div class="progress-bar">
+					<div class="progress-step"></div>
+				</div>
+			  </div>
                   <div class="form-group">
                     <label
                       >Enter Test Date & Duration<span class="tooltip"
@@ -598,6 +622,14 @@
                   role="tabpanel"
                   aria-labelledby="v-pills-third-tab"
                 >
+				<div class="tab-title-bar">
+			    <i class="fa fa-search mr-2 icon-container"></i>
+				<div class="tab-title">Identify zones to test</div>
+				<div class="tab-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+				<div class="progress-bar">
+					<div class="progress-step"></div>
+				</div>
+			  </div>
                   <div class="form-group">
                     <label
                       >Are there any set of zones you cannot test in
@@ -1055,7 +1087,7 @@
             </form>
           </div>
         </div>
-      </div>
+      
     </section>
   </body>
 </html>
