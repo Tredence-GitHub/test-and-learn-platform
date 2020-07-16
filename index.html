@@ -38,6 +38,7 @@
     />
     <link rel="stylesheet" href="css/jquery.range.css" />
     <link rel="stylesheet" href="css/bootstrap-multiselect.css" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/custom.css" />
 
@@ -65,7 +66,9 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="js/jquery.range.js"></script>
-    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
     <script src="js/custom.js"></script>
 
     <!-- Favicon
@@ -626,7 +629,7 @@
                       <label for="noteststoresno">No</label>
                     </p>
                     <div class="row" style="display: none;"  id="hide-11">
-                      <div class="col-md-4">
+                      <div class="col-md-5">
                         <select id="boot-multiselect" multiple="multiple">
                           <option value="1"
                             >All zones with tenure less than 6 weeks</option
@@ -656,7 +659,7 @@
                           Paste the list of zones
                             <b class="fa fa-angle-down"></b>
                           </button>
-                          <div class="dropdown-menu dark-bg">
+                          <div class="dropdown-menu dark-bg w100">
                             <form>
                               <div class="form-group px-3 mb-2">
                                 <label for="">Name</label>
@@ -711,7 +714,7 @@
                       <label for="teststoresno">No</label>
                     </p>
                     <div class="row" style="display: none;"  id="disable-1">
-                      <div class="col-md-4">
+                      <div class="col-md-5">
                         <select id="boot-multiselect2" multiple="multiple">
                           <option value="1"
                             >All zones with tenure less than 6 weeks</option
@@ -741,7 +744,7 @@
                           Paste the list of zones
                             <b class="fa fa-angle-down"></b>
                           </button>
-                          <div class="dropdown-menu dark-bg">
+                          <div class="dropdown-menu dark-bg w100">
                             <form>
                               <div class="form-group px-3 mb-2">
                                 <label for="">Name</label>
@@ -903,7 +906,7 @@
                             </div>
                         </div>
 
-
+                        
                         <table class="table table-striped table-theme">
                           <thead>
                             <tr>
@@ -956,6 +959,77 @@
                             </tr>
                           </tbody>
                         </table>
+
+                        <div class="row mt-4">
+<div class="col-md-6">
+    <label>Selected Test Zone List
+      <span class="tooltip"
+        >?
+        <span class="tooltiptext"
+          >Test & Learn recommends choosing the metric that
+          relates most directly to the primary measure of
+          success for your campaign. Ex- Driver retention.
+        </span>
+      </span>
+      </label>
+
+          <div class="table-responsive">
+            <table id="zonelist" style="width:100%" class="table table-striped table-theme">
+              <thead>
+                <tr>
+                  <th scope="col">Zone Name</th>
+                  <th scope="col" class="text-center">City</th>
+                  <th scope="col" class="text-center">State</th>
+                  <th scope="col" class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rockford</td>
+                  <td class="text-center">HOU</td>
+                  <td class="text-center">TX</td>
+                  <td class="text-center"><i class="fa fa-pencil pr-3"></i></td> 
+                </tr>
+                <tr>
+                  <td>Kingsport</td>
+                  <td class="text-center">MIA</td>
+                  <td class="text-center">FL</td>
+                  <td class="text-center"><i class="fa fa-pencil pr-3"></i></td> 
+                </tr>
+                <tr>
+                  <td>Green Bay</td>
+                  <td class="text-center">LA</td>
+                  <td class="text-center">CA</td>
+                  <td class="text-center"><i class="fa fa-pencil pr-3"></i></td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+</div>
+<div class="col-md-6">
+  <label>Test Zone Distribution
+    <span class="tooltip"
+      >?
+      <span class="tooltiptext"
+        >Test & Learn recommends choosing the metric that
+        relates most directly to the primary measure of
+        success for your campaign. Ex- Driver retention.
+      </span>
+    </span>
+    </label>
+    <ul class="chart">
+      <li>
+        <span style="height: 90%;" title="Green Bay"></span>
+      </li>
+      <li>
+        <span style="height: 30%;" title="Kingsport"></span>
+      </li>
+      <li>
+        <span style="height: 50%;" title="Rockford"></span>
+      </li>
+    </ul>
+</div>
+                        </div>
 
                     </div>
                  

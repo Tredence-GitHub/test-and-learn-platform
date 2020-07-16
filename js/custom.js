@@ -25,18 +25,19 @@ $(function () {
     });
   });
 
-  // enable disable screen 2 
+  // Enable Disable Screen 2 
   $(function () {
     $("[name=recommendnumber]").click(function () {
       $(".recommendnumber").hide();
       $("#hide-" + $(this).val()).show("slow");
     });
+
     $("#enableexpectedearnings").click(function () {
       $(".expectedearnings").show("slow");
     });
   });
 
-  // enable disable screen 3
+  // Enable Disable Screen 3
   $(function () {
     $("[name=noteststores]").click(function () {
       $("#hide-11").hide();
@@ -47,15 +48,27 @@ $(function () {
       $("#disable-1").hide();
       $("#disable-" + $(this).val()).show("slow");
     });
+
     $("#actualtestsites").click(function () {
       $(".samplecalc").show("slow");
+    });
+  });
+
+// Datatable 
+  $(function() {
+    $(document).ready(function() {
+      $('#zonelist').DataTable({
+        "paging":   false,
+        "info":     false,
+        "searching" : false
+      });
     });
   });
 
   // Bootstrap Multiselect
   $(document).ready(function () {
     $("#boot-multiselect").multiselect({
-      nonSelectedText: 'Custom Sets',
+      nonSelectedText: 'Select from custom set',
       includeSelectAllOption: true,
       numberDisplayed: 1,
       enableFiltering: true,
@@ -73,7 +86,7 @@ $(function () {
 
   $(document).ready(function () {
     $("#boot-multiselect2").multiselect({
-      nonSelectedText: 'Custom Sets',
+      nonSelectedText: 'Select from custom set',
       includeSelectAllOption: true,
       numberDisplayed: 1,
       enableFiltering: true,
@@ -91,7 +104,7 @@ $(function () {
 
   $(document).ready(function () {
     $("#boot-multiselect3").multiselect({
-      nonSelectedText: 'Custom Sets',
+      nonSelectedText: 'Select from custom set',
       includeSelectAllOption: true,
       numberDisplayed: 1,
       enableFiltering: true,

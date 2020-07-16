@@ -558,6 +558,12 @@ label{
   font-weight: 400;
   vertical-align: middle;
 }
+.table-theme tbody tr:first-child td{
+border-top: 0;
+}
+.table-theme tbody tr:last-child td{
+  border-bottom: 1px solid #7f581e;
+}
 .table-theme thead th{
   color: #ffe2c0 
 }
@@ -565,4 +571,7 @@ label{
 {
   width: auto;
   margin: 0 auto;
+}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after{
+  bottom: 0.7em;
 }
