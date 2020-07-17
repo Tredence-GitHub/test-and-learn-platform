@@ -332,7 +332,7 @@ padding: 10px;
     padding-left: 57px;
     position: absolute;
     top: 0;
-    left: 15px;
+    left: 0;
     right: 15px;
 }
 .icon-container{
@@ -452,10 +452,11 @@ form .infodata span{
   color: #ffca7d;
 }
 input.multiselect-search::-webkit-input-placeholder,
-input#reservationDate::-webkit-input-placeholder
+input#reservationDate::-webkit-input-placeholder,
+input::-webkit-input-placeholder 
 {
   font-size: 14px;
-  color:#7f581e;
+  color:#7f581e !important;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 14px;
@@ -710,6 +711,7 @@ button:focus{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     box-shadow: none;
+    height: 40px;
 }
 .dropdown .dropdown-item:focus, .dropdown .dropdown-item:hover, .dropdown-item:active {
   background-color: #1e2a313b;
@@ -725,7 +727,7 @@ button:focus{
 .sample-list{
   display: flex;
   justify-content: start;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .zone-icon{
     background: #c9802a;
@@ -829,9 +831,9 @@ label{
 .table-theme tbody tr:first-child td{
 border-top: 0;
 }
-.table-theme tbody tr:last-child td{
+/* .table-theme tbody tr:last-child td{
   border-bottom: 1px solid #7f581e;
-}
+} */
 .table-theme thead th{
   color: #ffe2c0 
 }
