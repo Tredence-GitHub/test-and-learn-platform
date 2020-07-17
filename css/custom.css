@@ -821,6 +821,7 @@ label{
   color: #ffca7d;
   font-weight: 400;
   vertical-align: middle;
+  font-size: 14px
 }
 .table-theme.table-striped tbody tr {
   background-color: transparent;
