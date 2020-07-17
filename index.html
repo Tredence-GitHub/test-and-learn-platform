@@ -190,7 +190,7 @@
               <div class="tab-content" id="v-pills-tabContent" style='margin-top: 54px;'>
 			  
                 <div
-                  class="tab-pane fade shadow rounded show active"
+                  class="tab-pane fade shadow show active"
                   id="v-pills-first"
                   role="tabpanel"
                   aria-labelledby="v-pills-first-tab"
@@ -345,7 +345,7 @@
                 </div>
 
                 <div
-                  class="tab-pane fade shadow rounded"
+                  class="tab-pane fade shadow "
                   id="v-pills-second"
                   role="tabpanel"
                   aria-labelledby="v-pills-second-tab"
@@ -401,8 +401,7 @@
 
                   <div class="form-group">
                     <label
-                      >Do you want us to recommend number of stores you want to
-                      test in?
+                      >Do you want us to recommend the sample size needed for the test?
                       <span class="tooltip"
                         >?
                         <span class="tooltiptext"
@@ -436,78 +435,11 @@
                     id="hide-1"
                     style="display: block;"
                   >
-                    <div class="form-group">
-                      <label
-                        >Do you want select your test stores from the entire
-                        pool of stores?
-                        <span class="tooltip"
-                          >?
-                          <span class="tooltiptext"
-                            >Test and learn gives you an option to select how
-                            you want tot proceed further. You can directly
-                            proceed to control store selection if you already
-                            have your test store list.
-                          </span>
-                        </span>
-                      </label>
-                      <br />
-
-                      <p>
-                        <input
-                          type="radio"
-                          id="option1"
-                          name="stores"
-                          checked
-                          value="Select Test and Control Stores"
-                        />
-                        <label for="option1">Yes, Include all stores</label>
-
-                        <input
-                          type="radio"
-                          id="option2"
-                          name="stores"
-                          value="Choose from custom list"
-                        />
-                        <label for="option2">Choose from custom list </label>
-
-                        <input
-                          type="radio"
-                          id="option3"
-                          name="stores"
-                          value="Select Control Stores"
-                        />
-                        <label for="option3">Upload CSV </label>
-                      </p>
-                    </div>
+                 
 
                     <div class="form-group">
                       <label
-                        >Set the Pre period which you want to consider for
-                        sample size selection?
-                        <span class="tooltip"
-                          >?
-                          <span class="tooltiptext"
-                            >Enter a name for your test that you would later
-                            like to refer to.</span
-                          >
-                        </span>
-                      </label>
-                      <div class="row">
-                        <div class="col-md-2">
-                          <input type="number" value="2" class="form-control" />
-                        </div>
-                        <div class="col-md-2">
-                          <select class="form-control">
-                            <option value="days">Days</option>
-                            <option value="month">Weeks</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label
-                        >Set expected incremental value of primary metric
+                        >Set expected percentage incremental value of primary metric 
                         <span class="tooltip"
                           >?
                           <span class="tooltiptext"
@@ -617,7 +549,7 @@
                 </div>
 
                 <div
-                  class="tab-pane fade shadow rounded"
+                  class="tab-pane fade shadow"
                   id="v-pills-third"
                   role="tabpanel"
                   aria-labelledby="v-pills-third-tab"
@@ -840,7 +772,8 @@
                         <th scope="col">Criteria</th>
                         <th scope="col" class="text-center">Value</th>
                         <th scope="col" class="text-center">Bucket</th>
-                        <th scope="col" class="text-center">Exclude</th>
+                        <th scope="col" class="text-center">Zones left</th>
+                        <th scope="col" class="text-center">Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -860,8 +793,11 @@
                             <option value="high">High</option>
                           </select>
                         </td>
-                        <td class="text-center"><i class="fa fa-remove"></i></td>
-                      </tr>
+                        <td class="text-center">
+                          75
+                         </td>
+                         <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
+                       </tr>
                       <tr>
                         <td>Delivery Order Volume</td>
                         <td class="text-center"> 
@@ -878,8 +814,11 @@
                             <option value="high">High</option>
                           </select>
                         </td>
-                        <td class="text-center"><i class="fa fa-remove"></i></td>
-                      </tr>
+                        <td class="text-center">
+                          32
+                         </td>
+                         <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
+                       </tr>
                       <tr>
                         <td>Avg. Spark Driver Earnings</td>
                         <td class="text-center"> 
@@ -896,7 +835,10 @@
                             <option value="high">High</option>
                           </select>
                         </td>
-                        <td class="text-center"><i class="fa fa-remove"></i></td>
+                        <td class="text-center">
+                          15
+                         </td>
+                         <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
                       </tr>
                       <tr>
                         <td>On Time Delivery Rate</td>
@@ -914,155 +856,183 @@
                             <option value="high">High</option>
                           </select>
                         </td>
-                        <td class="text-center"><i class="fa fa-remove"></i></td>
-                      </tr>
+                        <td class="text-center">
+                          10
+                         </td>
+                         <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
+                       </tr>
                     </tbody>
                   </table>
 
+                  <div class="form-group">
+                    <label
+                      >How do you want to optimize your final list of zones?
+                      <span class="tooltip"
+                        >?
+                        <span class="tooltiptext"
+                          >Test & Learn recommends choosing the metric that
+                          relates most directly to the primary measure of
+                          success for your campaign. Ex- Driver retention.
+                        </span>
+                      </span></label
+                    >
+          
+                    <div class="row">
+                      <div class="col-md-4">
+                        <select id="boot-multiselect4" multiple="multiple">
+                          <option value="1"
+                            >Zones With High  driver Population
+                            </option>
+                          <option value="2"
+                            >Zones With Medium Driver Population
+                          </option>
+                          <option value="3"
+                            >Zones With Low Driver Population
+                          </option>
+                          <option value="4"
+                            >Zones With Mixed Distribution Of Driver Population
+                          </option>
+                        </select>
+                      </div>
+                    
+                    </div>
+                  </div>
+
+                  
+                  <div class="form-group">
+                    <label
+                      >Do you want us to recommend the number of zones?
+                      <span class="tooltip"
+                        >?
+                        <span class="tooltiptext"
+                          >Test & Learn recommends choosing the metric that
+                          relates most directly to the primary measure of
+                          success for your campaign. Ex- Driver retention.
+                        </span>
+                      </span></label
+                    >
+                    <p>
+                      <input
+                        type="radio"
+                        id="noofzoneyes"
+                        name="noofzone"
+                        checked
+                        value="1"
+                      />
+                      <label for="noofzoneyes">Yes</label>
+
+                      <input
+                        type="radio"
+                        id="noofzoneno"
+                        name="noofzone"
+                        value="2"
+                      />
+                      <label for="noofzoneno">No</label>
+                    </p>
+                    <div class="row" style="display: none;"  id="noofzone-2">
+                      <div class="col-md-2">
+                      <input type="number" class="form-control" value="0">
+                      </div>
+                    </div>
+                  </div>
 
                   <div class="form-group">
-                    <u id="actualtestsites">Click here to get the actual test sites</u>
+                    <u id="actualtestsites">Click here to get the list of test zones</u>
                   </div>
 
                  
 
                     <div class="samplecalc" style="display: none;">
 
-                      <div class="sample-list">
-                          <div class="zone-icon">
-                          <i class="fa fa-map-o"></i>
-                          </div>
-                            <div class="zone-info">
-                                <label>Test Zones</label>
-                                <p>214</p>
+                        <ul id="myTab2" role="tablist" class="nav nav-tabs nav-tabs-theme nav-pills with-arrow lined flex-column flex-sm-row text-center">
+                          <li class="nav-item flex-sm-fill">
+                            <a id="firsttab-tab" data-toggle="tab" href="#firsttab" role="tab" aria-controls="firsttab" aria-selected="true" class="nav-link rounded-0 active">Zones to test</a>
+                          </li>
+                          <li class="nav-item flex-sm-fill">
+                            <a id="secondtab-tab" data-toggle="tab" href="#secondtab" role="tab" aria-controls="secondtab" aria-selected="false" class="nav-link rounded-0">Performance Across Selected Criteria/Metric</a>
+                          </li>
+                         
+                        </ul>
+                        <div id="myTab2Content" class="tab-content tab-content-theme">
+                          <div id="firsttab" role="tabpanel" aria-labelledby="first-tab" class="tab-pane fade px-0 py-3 show active bg-transparent">
+                            <div class="table-responsive">
+                              <table style="width:100%" class="table table-striped table-theme zonelist">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Zone Name</th>
+                                    <th scope="col" class="text-center">State</th>
+                                    <th scope="col" class="text-center">Spark Delivery Rate</th>
+                                    <th scope="col" class="text-center">Delivery Order Volume</th>
+                                    <th scope="col" class="text-center">Avg. Spark Driver Earning</th>
+                                    <th scope="col" class="text-center">On Time Delivery Rate</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Rockford</td>
+                                    <td class="text-center">TX</td>
+                                    <td class="text-center">96.2</td> 
+                                    <td class="text-center">716</td> 
+                                    <td class="text-center">$270</td> 
+                                    <td class="text-center">94.2%</td> 
+                                  </tr>
+                                  <tr>
+                                    <td>Kingsport</td>
+                                    <td class="text-center">FL</td>
+                                    <td class="text-center">96.2</td> 
+                                    <td class="text-center">716</td> 
+                                    <td class="text-center">$270</td> 
+                                    <td class="text-center">94.2%</td> 
+                                  </tr>
+                                  <tr>
+                                    <td>Green Bay</td>
+                                    <td class="text-center">CA</td>
+                                    <td class="text-center">96.2</td> 
+                                    <td class="text-center">716</td> 
+                                    <td class="text-center">$270</td> 
+                                    <td class="text-center">94.2%</td>  
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
+                          </div>
+                          <div id="secondtab" role="tabpanel" aria-labelledby="second-tab" class="tab-pane fade px-0 py-3 bg-transparent">
+                            <div class="table-responsive">
+                              <table style="width:100%" class="table table-striped table-theme zonelist">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Metrics/ Criteria </th>
+                                    <th scope="col" class="text-center">Spark Delivery Rate</th>
+                                    <th scope="col" class="text-center">Delivery Order Volume</th>
+                                    <th scope="col" class="text-center">Avg. Spark Driver Earning</th>
+                                    <th scope="col" class="text-center">On Time Delivery Rate</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Average  (Selected Test Pool)</td>
+                                    <td class="text-center">96.2</td> 
+                                    <td class="text-center">716</td> 
+                                    <td class="text-center">$270</td> 
+                                    <td class="text-center">94.2%</td> 
+                                  </tr>
+                                  <tr>
+                                    <td>Average  (Potential Test Pool)</td>
+                                    <td class="text-center">96.2</td> 
+                                    <td class="text-center">716</td> 
+                                    <td class="text-center">$270</td> 
+                                    <td class="text-center">94.2%</td> 
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                         </div>
+                     
 
-                        
-                        <table class="table table-striped table-theme">
-                          <thead>
-                            <tr>
-                              <th scope="col">Criteria</th>
-                              <th scope="col" class="text-center">Value</th>
-                              <th scope="col" class="text-center">Zones left</th>
-                              <th scope="col" class="text-center">Actions</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Spark Delivery Rate</td>
-                              <td class="text-center"> 
-                               >=95%
-                            </td>
-                              <td class="text-center">
-                               75
-                              </td>
-                              <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Delivery Order Volume</td>
-                              <td class="text-center"> 
-                             Medium
-                             </td>
-                               <td class="text-center">
-                                32
-                               </td>
-                               <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
-                            </tr>
-                            <tr>
-                              <td>Avg. Spark Driver Earnings</td>
-                              <td class="text-center"> 
-                             Medium
-                             </td>
-                               <td class="text-center">
-                                 15
-                               </td>
-                               <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
-                            </tr>
-                            <tr>
-                              <td>On Time Delivery Rate</td>
-                              <td class="text-center"> 
-                               >=93%
-                             </td>
-                               <td class="text-center">
-                               10
-                               </td>
-                               <td class="text-center"><i class="fa fa-pencil pr-3"></i> <i class="fa fa-remove"></i></td>
-                            </tr>
-                          </tbody>
-                        </table>
 
-                        <div class="row mt-4">
-<div class="col-md-6">
-    <label>Selected Test Zone List
-      <span class="tooltip"
-        >?
-        <span class="tooltiptext"
-          >Test & Learn recommends choosing the metric that
-          relates most directly to the primary measure of
-          success for your campaign. Ex- Driver retention.
-        </span>
-      </span>
-      </label>
 
-          <div class="table-responsive">
-            <table id="zonelist" style="width:100%" class="table table-striped table-theme">
-              <thead>
-                <tr>
-                  <th scope="col">Zone Name</th>
-                  <th scope="col" class="text-center">City</th>
-                  <th scope="col" class="text-center">State</th>
-                  <th scope="col" class="text-center">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Rockford</td>
-                  <td class="text-center">HOU</td>
-                  <td class="text-center">TX</td>
-                  <td class="text-center"><i class="fa fa-pencil pr-3"></i></td> 
-                </tr>
-                <tr>
-                  <td>Kingsport</td>
-                  <td class="text-center">MIA</td>
-                  <td class="text-center">FL</td>
-                  <td class="text-center"><i class="fa fa-pencil pr-3"></i></td> 
-                </tr>
-                <tr>
-                  <td>Green Bay</td>
-                  <td class="text-center">LA</td>
-                  <td class="text-center">CA</td>
-                  <td class="text-center"><i class="fa fa-pencil pr-3"></i></td> 
-                </tr>
-              </tbody>
-            </table>
-          </div>
-</div>
-<div class="col-md-6">
-  <label>Test Zone Distribution
-    <span class="tooltip"
-      >?
-      <span class="tooltiptext"
-        >Test & Learn recommends choosing the metric that
-        relates most directly to the primary measure of
-        success for your campaign. Ex- Driver retention.
-      </span>
-    </span>
-    </label>
-    <ul class="chart">
-      <li>
-        <span style="height: 90%;" title="Green Bay"></span>
-      </li>
-      <li>
-        <span style="height: 30%;" title="Kingsport"></span>
-      </li>
-      <li>
-        <span style="height: 50%;" title="Rockford"></span>
-      </li>
-    </ul>
-</div>
-                        </div>
-
+       
                     </div>
                  
 
@@ -1076,7 +1046,7 @@
                 </div>
 
                 <div
-                  class="tab-pane fade shadow rounded"
+                  class="tab-pane fade shadow"
                   id="v-pills-fourth"
                   role="tabpanel"
                   aria-labelledby="v-pills-fourth-tab"
