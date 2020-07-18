@@ -610,14 +610,23 @@ button:focus{
 
 
 /* media queries for responsiveness */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+@media screen and (max-width: 767px) {
+  .tab-section{
+    padding: 0;
   }
-  .header-right {
-    float: none;
+  .left-nav-bar, .tab-title-bar{
+    position: relative;
+    width: 100%;
+    max-width: inherit;
+  }
+  .tab-content-area{
+    padding:0;
+  }
+  .left-nav-bar + .tab-content-area .tab-content{
+    margin-top: 10px !important;
+  }
+  .slider-container.theme-green{
+    width: 100% !important;
   }
 }
 
