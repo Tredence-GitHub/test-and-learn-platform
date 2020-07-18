@@ -614,20 +614,23 @@ button:focus{
   .tab-section{
     padding: 0;
   }
-  .left-nav-bar, .tab-title-bar{
+  .left-nav-bar, .tab-title-bar, .header{
     position: relative;
     width: 100%;
     max-width: inherit;
   }
   .tab-content-area{
     padding:0;
+    overflow: hidden;
   }
-  .left-nav-bar + .tab-content-area .tab-content{
+  .left-nav-bar + .tab-content-area .tab-content, .overlaphead{
     margin-top: 10px !important;
   }
   .slider-container.theme-green{
     width: 100% !important;
   }
+  .tooltip .tooltiptext {
+    width: 150px;}
 }
 
 .nav-pills-custom .nav-link {
