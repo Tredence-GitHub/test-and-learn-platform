@@ -85,7 +85,7 @@ $(function () {
       templates: {
         li: '<li><a class="dropdown-item"><label class="p-2"></label></a></li>',
         ul: ' <ul class="multiselect-container dropdown-menu p-3 m-0  dark-bg"></ul>',
-        button: '<button type="button" class="multiselect dropdown-toggle text-left w100" data-toggle="dropdown" data-flip="true"><span class="multiselect-selected-text"></span> <b class="fa fa-angle-down"></b></button>',
+        button: '<button type="button" class="multiselect dropdown-toggle text-left w-100" data-toggle="dropdown" data-flip="true"><span class="multiselect-selected-text"></span> <b class="fa fa-angle-down"></b></button>',
         filter: '<li class="multiselect-item filter"><div class="input-group m-0 p-0"><input class="form-control m-0 multiselect-search" type="text"></div></li>',
         filterClearBtn: '<span class="input-group-btn"><button class="btn multiselect-clear-filter" type="button"><i class="fa fa-remove"></i></button></span>'
     },
@@ -166,3 +166,7 @@ $(() => {
 });
 
 });
+
+function redirectDesign() {
+  location.replace("https://tredence-github.github.io/test-and-learn-platform/design.html")
+}
