@@ -525,7 +525,7 @@ input::-webkit-input-placeholder
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-input[type=text], input[type=number], input[type=password], select {
+input[type=text], input[type=number], input[type=password], input[type=search], select {
   margin: 2px 0;
   box-sizing: border-box;
   font-size: 14px;
@@ -593,7 +593,16 @@ button:focus{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-
+.pagination .page-item.disabled .page-link {
+  color: #7f581e;
+  background-color: transparent;
+  border-color: #7f581e;
+  border-radius: 0;
+}
+.pagination .page-item.active .page-link {
+  background-color: #c9802a;
+  border-color: #c9802a;
+}
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {

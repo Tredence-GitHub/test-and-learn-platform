@@ -75,6 +75,16 @@ $(function () {
     });
   });
 
+  $(function() {
+    $(document).ready(function() {
+      $('.overview').DataTable({
+        "paging":   true,
+        "info":     false,
+        "searching" : true
+      });
+    });
+  });
+
   // Bootstrap Multiselect
   $(document).ready(function () {
     $(".boot-multiselect").multiselect({
