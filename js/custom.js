@@ -104,6 +104,185 @@ $(function () {
     });
   });
 
+// chart
+$(document).ready(function () {
+  var lineoptions = {
+    series: [
+    {
+      name: "Test",
+      data: [28, 29, 33, 36, 32, 32, 33]
+    },
+    {
+      name: "Control",
+      data: [12, 11, 14, 18, 17, 13, 13]
+    }
+  ],
+    chart: {
+    height: 350,
+    type: 'line',
+    dropShadow: {
+      enabled: true,
+      color: '#000',
+      top: 18,
+      left: 7,
+      blur: 10,
+      opacity: 0.2
+    },
+    toolbar: {
+      show: false
+    }
+  },
+  colors: ['#c9802a', '#0095ce'],
+  dataLabels: {
+    enabled: true,
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  title: {
+    text: 'Avg Earnings / Driver',
+    align: 'left',
+    style: {
+      fontWeight:  'normal',
+      color:  '#ffe2c0'
+    },
+  },
+  grid: {
+    borderColor: 'transparent',
+    row: {
+      colors: ['#2b3c46', 'transparent'], // takes an array which will be repeated on columns
+      opacity: 0.5
+    },
+  },
+  markers: {
+    size: 1
+  },
+  tooltip: {
+    enabled: true,
+    style: {
+      fontSize: '12px'
+    },
+    x: {
+      show: true,
+      format:'HH:mm'
+    },
+    y: {
+      formatter:(value) => `${value}`
+    },
+    marker: {
+      show: false,
+    },
+    theme:'dark'
+  },
+  xaxis: {
+    categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
+    labels: {
+      style: {
+          colors: '#bfb09b'
+      },
+    }
+  },
+  yaxis: {
+    min: 5,
+    max: 40,
+    labels: {
+      style: {
+          colors: '#bfb09b'
+      },
+    }
+  },
+  legend: {
+    position: 'top',
+    horizontalAlign: 'right',
+    floating: true,
+    offsetY: -25,
+    offsetX: -5,
+    labels: {
+      colors: '#bfb09b'
+  },
+  }
+  };
+  var linechart = new ApexCharts(document.querySelector("#linechart"), lineoptions);
+  linechart.render();
+
+
+  var baroptions = {
+    series: [{
+    data: [260, 280]
+  }],
+    chart: {
+      toolbar: {
+        show: false,
+      },
+    height: 350,
+    type: 'bar',
+    events: {
+      click: function(chart, w, e) {
+        // console.log(chart, w, e)
+      }
+    }
+  },
+  colors: ['#c9802a', '#0095ce'],
+  plotOptions: {
+    bar: {
+      columnWidth: '45%',
+      distributed: true
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    show: false
+  },
+  tooltip: {
+    enabled: true,
+    style: {
+      fontSize: '12px'
+    },
+    x: {
+      show: true,
+    },
+    y: {
+      formatter:(value) => `$${value}`
+    },
+    marker: {
+      show: false,
+    },
+    theme:'dark'
+  },
+  xaxis: {
+    categories: [
+      'During Campaign', 'Post Campaign'
+    ],
+    labels: {
+      style: {
+        colors: ['#c9802a', '#0095ce'],
+        fontSize: '12px'
+      }
+    }
+  },
+  title: {
+    text: 'Avg Earnings / Driver',
+    align: 'left',
+    style: {
+      fontWeight:  'normal',
+      color:  '#ffe2c0'
+    },
+  },
+  yaxis: {
+    labels: {
+      style: {
+          colors: '#bfb09b'
+      },
+    }
+  },
+  
+  };
+
+  var barchart = new ApexCharts(document.querySelector("#barchart"), baroptions);
+  barchart.render();
+});
 
 
   $('.dropdown-menu').find('form').click(function (e) {
@@ -177,6 +356,8 @@ $(() => {
 
 });
 
+// Redirect
 function redirectDesign() {
   location.replace("https://tredence-github.github.io/test-and-learn-platform/design.html")
 }
+
