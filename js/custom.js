@@ -25,6 +25,14 @@ $(function () {
     });
   });
 
+  // Enable Disable Screen 1
+  $(function () {
+    $("[name=proceed]").click(function () {
+      $("#enable-val2").hide();
+      $("#enable-val" + $(this).val()).show("slow");
+    });
+  });
+
   // Enable Disable Screen 2 
   $(function () {
     $("[name=recommendnumber]").click(function () {

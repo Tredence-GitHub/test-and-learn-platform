@@ -207,6 +207,9 @@ margin-top: 87px;
   font-size: 16px;
   line-height: 20px;
 }
+.header .nav-item.active a{
+  color: #ffca7d;
+}
 .header a.logo {
  padding: 0;
 }
@@ -534,7 +537,9 @@ input[type=text], input[type=number], input[type=password], input[type=search], 
   font-size: 14px;
   height: 40px;
 }
-input:focus, select:focus, .btn-outline-theme:hover, .btn-outline-theme:focus, .btn-outline-theme:active {
+input:focus, select:focus, .btn-outline-theme:hover, 
+textarea.focus,
+.btn-outline-theme:focus, .btn-outline-theme:active {
   color: #ffd79e !important;
   border-color: #ffa828 !important;
   outline: none !important;
@@ -778,49 +783,31 @@ button:focus{
   margin: 0;
   color: #ffca7d;
 }
-
-.chart {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  padding: 0;
-  max-width: 700px;
-  height: 170px;
-  margin: 0 0 50px;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 2%, rgba(0, 0, 0, 0) 2%);
-  background-size: 100% 50px;
-  background-position: left top;
-}
-.chart li {
-  position: relative;
-  display: table-cell;
-  vertical-align: bottom;
-  height: 170px;
-}
-.chart span {
-  margin: 0 1em;
-  display: block;
-  background: rgba(253, 126, 20, 0.13);
-  animation: draw 1s ease-in-out;
-}
-.chart span:before {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  padding: 5px 1em 0;
-  display: block;
+.sample-blocks li{
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: rgba(155, 98, 31, 0.13);
+  border: 2px dashed rgba(152, 96, 30, 0.2);
+  color: #ffe2c0;
+  font-size: 16px;
+  margin: 0 15px 20px 0;
+  outline: none;
   text-align: center;
-  content: attr(title);
-  word-wrap: break-word;
+  font-weight: 100;
 }
-
-@keyframes draw {
-  0% {
-    height: 0;
-  }
+.sample-blocks li h3{
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 5px 0;
 }
-
+.sample-blocks li h5{
+  margin: 0 0 5px 0;
+}
+.sample-blocks li p{
+  font-size: 12px;
+  color: #f3aa3a;
+  font-weight: 400;
+}
 .btn-outline-theme {
   color: #ffca7d;
   border-color: #7f581e;
