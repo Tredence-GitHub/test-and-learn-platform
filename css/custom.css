@@ -1110,6 +1110,8 @@ color: #f35448;
 }
 .multiselect-container.dropdown-menu{
   border-radius: 0;
+  max-height: 250px;
+  overflow-y: auto;
 }
 .testname{
   font-weight: 100;

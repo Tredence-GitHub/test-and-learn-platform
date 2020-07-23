@@ -202,20 +202,27 @@ $(document).ready(function () {
   },
   }
   };
-  var linechart = new ApexCharts(document.querySelector("#linechart"), lineoptions);
+  var linechart = new ApexCharts(document.querySelector(".linechart"), lineoptions);
   linechart.render();
+
+  var linechartdelivery = new ApexCharts(document.querySelector(".linechartdelivery"), lineoptions);
+  linechartdelivery.render();
+
+  var linechartsurvey = new ApexCharts(document.querySelector(".linechartsurvey"), lineoptions);
+  linechartsurvey.render();
 
 
   var baroptions = {
     series: [{
-    data: [260, 280]
+      name: "Lift",
+      data: [0.10, 0.09, 0.06, -0.90, -1.10, -0.60, 0.10]
   }],
     chart: {
       toolbar: {
         show: false,
       },
     height: 350,
-    type: 'bar',
+    type: 'line',
     events: {
       click: function(chart, w, e) {
         // console.log(chart, w, e)
@@ -223,14 +230,11 @@ $(document).ready(function () {
     }
   },
   colors: ['#c9802a', '#0095ce'],
-  plotOptions: {
-    bar: {
-      columnWidth: '45%',
-      distributed: true
-    }
-  },
   dataLabels: {
     enabled: false
+  },
+  grid: {
+    borderColor: '#2b3c46',
   },
   legend: {
     show: false
@@ -244,7 +248,7 @@ $(document).ready(function () {
       show: true,
     },
     y: {
-      formatter:(value) => `$${value}`
+      formatter:(value) => `${value}%`
     },
     marker: {
       show: false,
@@ -252,18 +256,16 @@ $(document).ready(function () {
     theme:'dark'
   },
   xaxis: {
-    categories: [
-      'During Campaign', 'Post Campaign'
-    ],
+    categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
+        
     labels: {
       style: {
-        colors: ['#c9802a', '#0095ce'],
-        fontSize: '12px'
+        colors: '#bfb09b'
       }
     }
   },
   title: {
-    text: 'Avg Earnings / Driver',
+    text: '% Lift',
     align: 'left',
     style: {
       fontWeight:  'normal',
@@ -279,9 +281,15 @@ $(document).ready(function () {
   },
   
   };
-
-  var barchart = new ApexCharts(document.querySelector("#barchart"), baroptions);
+  var barchart = new ApexCharts(document.querySelector(".barchart"), baroptions);
   barchart.render();
+
+  var barchartdelivery = new ApexCharts(document.querySelector(".barchartdelivery"), baroptions);
+  barchartdelivery.render();
+
+  var barchartsurvey = new ApexCharts(document.querySelector(".barchartsurvey"), baroptions);
+  barchartsurvey.render();
+
 });
 
 

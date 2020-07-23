@@ -88,7 +88,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Overview</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="design.html">Design Experiment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="measure.html">Measure Experiment</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Tools</a>
@@ -215,24 +221,28 @@
           <div class="col-md-5 ml-auto text-right">
             <label for="selectmetric" class="measurefilter">Select Metrics :
             <select class="boot-multiselect" multiple="multiple">
-              <option value="1"
-                >Spark Delivery Rate</option
-              >
-              <option value="2"
-                >Delivery Order Volume</option
-              >
-              <option value="3"
-                >Avg. Spark Driver Earnings</option
-              >
-              <option value="4"
-                >On Time Delivery Rate</option
-              >
+              <option value="1">Orders per driver</option>
+              <option value="2">Driver Tenure</option>
+              <option value="3">Spark order share</option>
+              <option value="4">Call centre calls</option>
+              <option value="5">Avg driver earning</option>
+              <option value="6">Tips/Orders with tips</option>
+              <option value="7">Earning per order</option>
+              <option value="8">Bonus amount</option>
+              <option value="9">Offer Acceptance</option>
+              <option value="10">Percentage of orders accepted via RR</option>
+              <option value="11">PSA</option>
+              <option value="12">% of orders accepted via Broadcast with surge</option>
+              <option value="13">Broadcast acceptance</option>
+              <option value="14">% Orders expired</option>
+              <option value="15">3rd party orders</option>
+              <option value="16">dropped orders</option>
             </select>
           </label>
           </div>
         </div>
 
-        <div class="row mt-4 mb-5">
+        <div class="row mt-4 mb-4">
           <div class="col-md-3">
              <div class="info-card shadow">
                     <div class="d-flex justify-content-between">
@@ -293,16 +303,26 @@
         </div>
           </div>
          </div>
+
+         <div class="row">   
+          <div class="col-md-12 ml-auto text-right">
+            <label class="measurefilter">Filter by :  &nbsp;
+            <select class="form-control d-inline-block w-auto mb-2">
+              <option value="week">Week</option>
+              <option value="days">Days</option>
+            </select>
+          </label>
+          </div>
+        </div>
+ 
          <div class="row">
            <div class="col-md-6">
-            <div id="linechart"></div>
+            <div class="linechart"></div>
            </div>
            <div class="col-md-6">
-            <div id="barchart"></div>
+              <div class="barchart"></div>
            </div>
          </div>
-
-
       </div>
 
       <div id="deliveryoperation" role="tabpanel" aria-labelledby="deliveryoperation-tab" class="tab-pane fade p-0 bg-transparent">
@@ -310,141 +330,255 @@
           <div class="col-md-5 ml-auto text-right">
             <label for="selectmetric" class="measurefilter">Select Metrics :
             <select class="boot-multiselect" multiple="multiple">
-              <option value="1"
-                >Spark Delivery Rate</option
-              >
-              <option value="2"
-                >Delivery Order Volume</option
-              >
-              <option value="3"
-                >Avg. Spark Driver Earnings</option
-              >
-              <option value="4"
-                >On Time Delivery Rate</option
-              >
+              <option value="1">Time to store</option>
+              <option value="2">Store Wait time</option>
+              <option value="3">Delivery time</option>
+              <option value="4">Drop wait time</option>
+              <option value="5">Order distance/Long distance orders</option>
+              <option value="6">OTD</option>
+              <option value="7">OTA</option>
+              <option value="8">OTP</option>
+              <option value="9">Batch rate</option>
+              <option value="10">Multiple trips for an order</option>
+              <option value="11">Returned Orders</option>
+              <option value="12">Batch units</option>
+              <option value="13">Avg Basket size</option>
+              <option value="14">Large/Cold storage items</option>
             </select>
           </label>
           </div>
+        </div>
+
+        <div class="row mt-4 mb-4">
+          <div class="col-md-3">
+             <div class="info-card shadow">
+                    <div class="d-flex justify-content-between">
+                       <h5>Order Volume</h5>
+                       <span>10,000</span>
+                    </div>
+               
+                       <div class="mt-4">
+                        <h2><span class="text-positive"> <i class="fa fa-caret-up"></i></span> 50</h2>
+                        <p>vs 5,000 (Control)</p>
+                       </div>
+                      
+              </div>
+          </div>
+ 
+          <div class="col-md-3">
+            <div class="info-card shadow">
+              <div class="d-flex justify-content-between">
+                 <h5>Spark Delivery Rate</h5>
+                 <span>97%</span>
+              </div>
+         
+                 <div class="mt-4">
+                  <h2><span class="text-positive"> <i class="fa fa-caret-up"></i></span> 1%</h2>
+                  <p>vs 98% (Control)</p>
+                 </div>
+                
+        </div>
+          </div>
+     
+          <div class="col-md-3">
+            <div class="info-card shadow">
+              <div class="d-flex justify-content-between">
+                 <h5>Orders / Driver</h5>
+                 <span>19</span>
+              </div>
+         
+                 <div class="mt-4">
+                  <h2><span class="text-negative"> <i class="fa fa-caret-down"></i></span> 32%</h2>
+                  <p>vs 25 (Control)</p>
+                 </div>
+                
+        </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="info-card shadow">
+              <div class="d-flex justify-content-between">
+                 <h5>% Driver Delivered</h5>
+                 <span>30%</span>
+              </div>
+         
+                 <div class="mt-4">
+                  <h2><span class="text-negative"> <i class="fa fa-caret-down"></i></span> 4%</h2>
+                  <p>vs 34% (Control)</p>
+                 </div>
+                
+        </div>
+          </div>
+         </div>
+       
+         <div class="row">   
+          <div class="col-md-12 ml-auto text-right">
+            <label class="measurefilter">Filter by :  &nbsp;
+            <select class="form-control d-inline-block w-auto mb-2">
+              <option value="week">Week</option>
+              <option value="days">Days</option>
+            </select>
+          </label>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-6">
+           <div class="linechartdelivery"></div>
+          </div>
+          <div class="col-md-6">
+           <div class="barchartdelivery"></div>
+          </div>
+        </div>
       </div>
-        <div class="table-responsive">
-          <table class="table table-striped table-theme w-100 zonelist">
-            <thead>
-              <tr>
-                <th scope="col">Test Zone</th>
-                <th scope="col" class="text-center">State</th>
-                <th scope="col">Control Zone</th>
-                <th scope="col" class="text-center">Spark Delivery Rate</th>
-                <th scope="col" class="text-center">Delivery Order Volume</th>
-                <th scope="col" class="text-center">Avg. Spark Driver Earning</th>
-                <th scope="col" class="text-center">On Time Delivery Rate</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Rockford</td>
-                <td class="text-center">TX</td>
-                <td class="text-center">Amarillo</td>
-                <td class="text-center">95%</td> 
-                <td class="text-center">98%</td> 
-                <td class="text-center">93%</td> 
-                <td class="text-center">94%</td> 
-              </tr>
-              <tr>
-                <td>Kingsport</td>
-                <td class="text-center">FL</td>
-                <td class="text-center">Appleton</td>
-                <td class="text-center">96%</td> 
-                <td class="text-center">98%</td> 
-                <td class="text-center">93%</td> 
-                <td class="text-center">94%</td> 
-              </tr>
-              <tr>
-                <td>Green Bay</td>
-                <td class="text-center">CA</td>
-                <td class="text-center">Billings</td>
-                <td class="text-center">92%</td> 
-                <td class="text-center">96%</td> 
-                <td class="text-center">93%</td> 
-                <td class="text-center">94%</td> 
-              </tr>
-            </tbody>
-          </table>
-    </div>
-      </div>
+
       <div id="surveymetric" role="tabpanel" aria-labelledby="surveymetric-tab" class="tab-pane fade p-0 bg-transparent">
         <div class="row">   
           <div class="col-md-5 ml-auto text-right">
             <label for="selectmetric" class="measurefilter">Select Metrics :
             <select class="boot-multiselect" multiple="multiple">
-              <option value="1"
-                >Spark Delivery Rate</option
-              >
-              <option value="2"
-                >Delivery Order Volume</option
-              >
-              <option value="3"
-                >Avg. Spark Driver Earnings</option
-              >
-              <option value="4"
-                >On Time Delivery Rate</option
-              >
+              <option value="1">CSAT rating</option>
+              <option value="2">Driver friendliness</option>
+              <option value="3">Driver CSAT</option>
+              <option value="4">CSAT delivery</option>
             </select>
           </label>
           </div>
+        </div>
+
+        <div class="row mt-4 mb-4">
+          <div class="col-md-3">
+             <div class="info-card shadow">
+                    <div class="d-flex justify-content-between">
+                       <h5>CSAT Rating</h5>
+                       <span>93%</span>
+                    </div>
+               
+                       <div class="mt-4">
+                        <h2><span class="text-positive"> <i class="fa fa-caret-up"></i></span> 2%</h2>
+                        <p>vs 91 (Control)</p>
+                       </div>
+                      
+              </div>
+          </div>
+     
+          <div class="col-md-3">
+            <div class="info-card shadow">
+              <div class="d-flex justify-content-between">
+                 <h5>Driver Friendliness</h5>
+                 <span>97%</span>
+              </div>
+         
+                 <div class="mt-4">
+                  <h2><span class="text-negative"> <i class="fa fa-caret-down"></i></span> 1%</h2>
+                  <p>vs 96% (Control)</p>
+                 </div>
+                
+        </div>
+          </div>
+ 
+          <div class="col-md-3">
+            <div class="info-card shadow">
+                   <div class="d-flex justify-content-between">
+                      <h5>Driver CSAT</h5>
+                      <span>90%</span>
+                   </div>
+              
+                      <div class="mt-4">
+                       <h2><span class="text-positive"> <i class="fa fa-caret-up"></i></span> 3%</h2>
+                       <p>vs 91 (Control)</p>
+                      </div>
+                     
+             </div>
+         </div>
+
+          <div class="col-md-3">
+            <div class="info-card shadow">
+              <div class="d-flex justify-content-between">
+                 <h5>CSAT Delivery</h5>
+                 <span>94%</span>
+              </div>
+         
+                 <div class="mt-4">
+                  <h2><span class="text-positive"> <i class="fa fa-caret-up"></i></span> 1%</h2>
+                  <p>vs 93% (Control)</p>
+                 </div>
+                
+        </div>
+          </div>
+         </div>
+       
+         <div class="row">   
+          <div class="col-md-12 ml-auto text-right">
+            <label class="measurefilter">Filter by :  &nbsp;
+            <select class="form-control d-inline-block w-auto mb-2">
+              <option value="week">Week</option>
+              <option value="days">Days</option>
+            </select>
+          </label>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-6">
+           <div class="linechartsurvey"></div>
+          </div>
+          <div class="col-md-6">
+           <div class="barchartsurvey"></div>
+          </div>
+        </div>
       </div>
-        <div class="table-responsive">
-          <table class="table table-striped table-theme w-100 zonelist">
-            <thead>
-              <tr>
-                <th scope="col">Test Zone</th>
-                <th scope="col" class="text-center">State</th>
-                <th scope="col">Control Zone</th>
-                <th scope="col" class="text-center">Spark Delivery Rate</th>
-                <th scope="col" class="text-center">Delivery Order Volume</th>
-                <th scope="col" class="text-center">Avg. Spark Driver Earning</th>
-                <th scope="col" class="text-center">On Time Delivery Rate</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Rockford</td>
-                <td class="text-center">TX</td>
-                <td class="text-center">Amarillo</td>
-                <td class="text-center">95%</td> 
-                <td class="text-center">98%</td> 
-                <td class="text-center">93%</td> 
-                <td class="text-center">94%</td> 
-              </tr>
-              <tr>
-                <td>Kingsport</td>
-                <td class="text-center">FL</td>
-                <td class="text-center">Appleton</td>
-                <td class="text-center">96%</td> 
-                <td class="text-center">98%</td> 
-                <td class="text-center">93%</td> 
-                <td class="text-center">94%</td> 
-              </tr>
-              <tr>
-                <td>Green Bay</td>
-                <td class="text-center">CA</td>
-                <td class="text-center">Billings</td>
-                <td class="text-center">92%</td> 
-                <td class="text-center">96%</td> 
-                <td class="text-center">93%</td> 
-                <td class="text-center">94%</td> 
-              </tr>
-            </tbody>
-          </table>
-    </div>
-      </div>
+
       <div id="zoneinfo" role="tabpanel" aria-labelledby="zoneinfo-tab" class="tab-pane fade p-0 bg-transparent">
+        <div class="row mb-3">   
+          <div class="col-md-5 ml-auto text-right">
+            <label for="selectmetric" class="measurefilter">Select Metrics :
+            <select class="boot-multiselect" multiple="multiple">
+              <option value="1">Orders per driver</option>
+              <option value="2">Driver Tenure</option>
+              <option value="3">Spark order share</option>
+              <option value="4">Call centre calls</option>
+              <option value="5">Avg driver earning</option>
+              <option value="6">Tips/Orders with tips</option>
+              <option value="7">Earning per order</option>
+              <option value="8">Bonus amount</option>
+              <option value="9">Offer Acceptance</option>
+              <option value="10">Percentage of orders accepted via RR</option>
+              <option value="11">PSA</option>
+              <option value="12">% of orders accepted via Broadcast with surge</option>
+              <option value="13">Broadcast acceptance</option>
+              <option value="14">% Orders expired</option>
+              <option value="15">3rd party orders</option>
+              <option value="16">dropped orders</option>
+              <option value="17">Time to store</option>
+              <option value="18">Store Wait time</option>
+              <option value="19">Delivery time</option>
+              <option value="20">Drop wait time</option>
+              <option value="21">Order distance/Long distance orders</option>
+              <option value="22">OTD</option>
+              <option value="23">OTA</option>
+              <option value="24">OTP</option>
+              <option value="25">Batch rate</option>
+              <option value="26">Multiple trips for an order</option>
+              <option value="27">Returned Orders</option>
+              <option value="28">Batch units</option>
+              <option value="29">Avg Basket size</option>
+              <option value="30">Large/Cold storage items</option>
+              <option value="31">CSAT rating</option>
+              <option value="32">Driver friendliness</option>
+              <option value="33">Driver CSAT</option>
+              <option value="34">CSAT delivery</option>
+            </select>
+          </label>
+          </div>
+        </div>
+        
         <div class="table-responsive">
           <table class="table table-striped table-theme w-100 zonelist">
             <thead>
               <tr>
                 <th scope="col">CBSA</th>
                 <th scope="col" class="text-center">Spark Zone</th>
-                <th scope="col" class="text-center">Store</th>
                 <th scope="col" class="text-center">Pre Surge Acceptance Rate</th>
                 <th scope="col" class="text-center">Spark Driver Delivered %</th>
                 <th scope="col" class="text-center">Cost Per Delivery</th>
@@ -453,13 +587,41 @@
             </thead>
             <tbody>
               <tr>
-                <td>Rockford</td>
-                <td class="text-center">TX</td>
-                <td class="text-center">TX</td>
-                <td class="text-center">TX</td>
-                <td class="text-center">TX</td>
-                <td class="text-center">TX</td>
-                <td class="text-center">TX</td>
+                <td rowspan="2">Amarillo, Tascosa</td>
+                <td class="text-center">Amarillo</td>
+                <td class="text-center">96%</td>
+                <td class="text-center">98%</td>
+                <td class="text-center">$6</td>
+                <td class="text-center">90%</td>
+              </tr>
+              <tr>
+                <td class="text-center">Tascosa</td>
+                <td class="text-center">95%</td>
+                <td class="text-center">97%</td>
+                <td class="text-center">$7</td>
+                <td class="text-center">89%</td>
+              </tr>
+              <tr>
+                <td rowspan="3">Abingdon, Airport, Alliance</td>
+                <td class="text-center">Abingdon</td>
+                <td class="text-center">97%</td>
+                <td class="text-center">96%</td>
+                <td class="text-center">$8</td>
+                <td class="text-center">92%</td>
+              </tr>
+              <tr>
+                <td class="text-center">Airport</td>
+                <td class="text-center">96%</td>
+                <td class="text-center">95%</td>
+                <td class="text-center">$6</td>
+                <td class="text-center">94%</td>
+              </tr>
+              <tr>
+                <td class="text-center">Alliance</td>
+                <td class="text-center">92%</td>
+                <td class="text-center">98%</td>
+                <td class="text-center">$9</td>
+                <td class="text-center">93%</td>
               </tr>
             </tbody>
           </table>
