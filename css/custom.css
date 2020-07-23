@@ -808,6 +808,15 @@ button:focus{
   color: #f3aa3a;
   font-weight: 400;
 }
+.sample-blocks li.active{
+  color: #fff6eb;
+  background: #965f1e;
+  background: linear-gradient(to right, #c9802a, #965f1e);
+  border: 0;
+}
+.sample-blocks li.active p{
+  color: #fff6eb;
+}
 .btn-outline-theme {
   color: #ffca7d;
   border-color: #7f581e;
