@@ -1119,3 +1119,15 @@ color: #f35448;
   outline: none;
   padding: 10px 15px 10px 15px;
 }
+.custom-xs-input{
+  font-size: 14px;
+}
+.custom-xs-input input{
+  width: 50px !important;
+  height: 30px;
+  padding: 0 5px;
+}
+.metrichead h5{
+  color: #ffca7d;
+  font-weight: 100;
+}
