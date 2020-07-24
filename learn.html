@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>TALP</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/jquery.range.css" />
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+      integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.range.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg header">
+      <a href="index.html" class="navbar-brand logo"
+        ><img src="images/logo-dark.png" 
+      /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="measure.html">Measure</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tools</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+        <div class="header-right">
+          <a href="#" class="avatar">
+            <span><img src="images/avatar.jpg" alt="avatar"></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+      <section class="container overlaphead">
+        <div class="row">
+<div class="col-md-12">
+   
+    <ul id="myTab2" role="tablist" class="nav nav-tabs nav-tabs-theme blocked nav-pills-custom nav-pills with-arrow flex-column flex-sm-row text-center my-4 border-0">
+      <li class="nav-item flex-sm-fill">
+        <a id="KPIsummary-tab" data-toggle="tab" href="#KPIsummary" role="tab" aria-controls="KPIsummary" aria-selected="true" class="nav-link rounded-0 active">KPI Summary</a>
+        </li>
+      <li class="nav-item flex-sm-fill">
+        <a id="features-tab" data-toggle="tab" href="#features" role="tab" aria-controls="features" aria-selected="false" class="nav-link rounded-0">Experiment Features</a>
+      </li>
+    </ul>
+    <div id="myTab2Content" class="tab-content tab-content-theme mb-5">
+      <div id="KPIsummary" role="tabpanel" aria-labelledby="KPIsummary-tab" class="tab-pane fade p-0 show active bg-transparent">
+        <div class="row">   
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Business Goals</label>
+                    <select class="form-control">
+                      <option value="Product Line Extension">Product Line Extension</option>
+                    </select>
+                  </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Type of Experiment</label>
+                    <select class="form-control">
+                        <option value="new product launch">New Product Launch</option>
+                    </select>
+                  </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Select Experiment</label>
+                    <select class="form-control">
+                      <option value="tass">TAAS</option>
+                      <option value="dynamic">Dynamic</option>
+                      <option value="fast delivery">Fast Delivery</option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row  my-3">   
+            <div class="col-md-6 mr-auto text-left">
+                <label class="measurefilter">Number of Attributes :
+                    <input type="number" value="5" class="form-control d-inline-block w-auto" />
+              </label>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+             <div class="reversedbarchart"></div>
+            </div>
+            <div class="col-md-6">
+             <div class="basicbarchart"></div>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="submit" value="use">Use</button>
+            <button type="button" value="Discard">
+                Discard
+            </button>
+          </div>
+      </div>
+
+      <div id="features" role="tabpanel" aria-labelledby="features-tab" class="tab-pane fade p-0 bg-transparent">
+        <div class="row">   
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Business Goals</label>
+                    <select class="form-control">
+                      <option value="Product Line Extension">Product Line Extension</option>
+                    </select>
+                  </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Type of Experiment</label>
+                    <select class="form-control">
+                        <option value="new product launch">New Product Launch</option>
+                    </select>
+                  </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Select Experiment</label>
+                    <select class="form-control">
+                      <option value="tass">TAAS</option>
+                      <option value="dynamic">Dynamic</option>
+                      <option value="fast delivery">Fast Delivery</option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+        
+        <div class="row  my-3">   
+            <div class="col-md-6 mr-auto text-left">
+                <label class="measurefilter">Number of Attributes :
+                    <input type="number" value="5" class="form-control d-inline-block w-auto" />
+              </label>
+              </div>
+          <div class="col-md-6 ml-auto text-right">
+            <label for="selectmetric" class="measurefilter">Metrics :
+            <select class="boot-multiselect" multiple="multiple">
+              <option value="1">Time to store</option>
+              <option value="2">Store Wait time</option>
+              <option value="3">Delivery time</option>
+              <option value="4">Drop wait time</option>
+              <option value="5">Order distance/Long distance orders</option>
+              <option value="6">OTD</option>
+              <option value="7">OTA</option>
+              <option value="8">OTP</option>
+              <option value="9">Batch rate</option>
+              <option value="10">Multiple trips for an order</option>
+              <option value="11">Returned Orders</option>
+              <option value="12">Batch units</option>
+              <option value="13">Avg Basket size</option>
+              <option value="14">Large/Cold storage items</option>
+            </select>
+          </label>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-6">
+           <div class="reversedbarchartfeatures"></div>
+          </div>
+          <div class="col-md-6">
+           <div class="basicbarchartfeatures"></div>
+          </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" value="use">Use</button>
+            <button type="button" value="Discard">
+                Discard
+            </button>
+          </div>
+      </div>
+    </div>
+
+</div>
+  </div>
+        </section>
+    
+    </div>
+</body>
+</html>
