@@ -375,7 +375,81 @@ $(document).ready(function () {
   var reversedbarchart = new ApexCharts(document.querySelector(".reversedbarchart"), reversedbaroptions);
   reversedbarchart.render();
 
-  var reversedbarchartfeatures = new ApexCharts(document.querySelector(".reversedbarchartfeatures"), reversedbaroptions);
+  var reversedbarchartfeaturesoptions = {
+    series: [{
+      name: "Positive Lift",
+      data: [6.5, 5.3, 4.1, 3.7]
+  }],
+  title: {
+    text: 'Positive Lift %',
+    align: 'left',
+    style: {
+      fontWeight:  'normal',
+      color:  '#ffe2c0'
+    },
+  },
+  tooltip: {
+    enabled: true,
+    style: {
+      fontSize: '12px'
+    },
+    x: {
+      show: true,
+    },
+    y: {
+      formatter:(value) => `${value}%`
+    },
+    marker: {
+      show: false,
+    },
+    theme:'dark'
+  },
+    chart: {
+      toolbar: {
+        show: false,
+      },
+    type: 'bar',
+    height: 350
+  },
+  plotOptions: {
+    bar: {
+      horizontal: true,
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter:(value) => `${value}%`
+
+  },
+  xaxis: {
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    categories: ['Avg Basket Size', 'Time to Store', 'Dropped Orders', 'Offer Acceptance'],
+  },
+  grid: {
+    borderColor: 'transparent',
+  },
+  yaxis: {
+    reversed: true,
+    labels: {
+      style: {
+          colors: '#bfb09b'
+      },
+    },
+    axisTicks: {
+      show: false,
+    }
+  },
+  colors: ['#3dbb58'],
+  };
+  var reversedbarchartfeatures = new ApexCharts(document.querySelector(".reversedbarchartfeatures"), reversedbarchartfeaturesoptions);
   reversedbarchartfeatures.render();
 
   var basicbaroptions = {
@@ -409,7 +483,7 @@ $(document).ready(function () {
     axisTicks: {
       show: false,
     },
-    categories: ['Order Expired', 'Orders Dropped', 'Third Party Orders	', 'Broadcast Acceptance', 'Third Party Orders'],
+    categories: ['Order Expired', 'Orders Dropped', 'Third Party Orders	', 'Broadcast Acceptance', 'Store Wait Time'],
   },
   title: {
     text: 'Negative Lift %',
@@ -450,7 +524,76 @@ $(document).ready(function () {
   var basicbarchart = new ApexCharts(document.querySelector(".basicbarchart"), basicbaroptions);
   basicbarchart.render();
 
-  var basicbarchartfeatures = new ApexCharts(document.querySelector(".basicbarchartfeatures"), basicbaroptions);
+  var basicbarchartfeaturesoptions = {
+    series: [{
+    name: "Negative Lift",
+    data: [3.2, 2.7, 2.1, 1.4]
+  }],
+    chart: {
+      toolbar: {
+        show: false,
+      },
+    type: 'bar',
+    height: 350
+  },
+  plotOptions: {
+    bar: {
+      horizontal: true,
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter:(value) => `${value}%`
+  },
+  xaxis: {
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    categories: ['CSAT delivery', 'Driver friendliness', 'Batch Units', 'Returned Orders'],
+  },
+  title: {
+    text: 'Negative Lift %',
+    align: 'right',
+    style: {
+      fontWeight:  'normal',
+      color:  '#ffe2c0'
+    },
+  },
+  yaxis: {
+    labels: {
+      style: {
+          colors: '#bfb09b'
+      },
+    }
+  },
+  tooltip: {
+    enabled: true,
+    style: {
+      fontSize: '12px'
+    },
+    x: {
+      show: true,
+    },
+    y: {
+      formatter:(value) => `${value}%`
+    },
+    marker: {
+      show: false,
+    },
+    theme:'dark'
+  },
+  grid: {
+    borderColor: 'transparent',
+  },
+  colors: ['  #f35448'],
+  };
+  var basicbarchartfeatures = new ApexCharts(document.querySelector(".basicbarchartfeatures"), basicbarchartfeaturesoptions);
   basicbarchartfeatures.render();
 });
 
