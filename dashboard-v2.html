@@ -87,7 +87,7 @@
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="dashboard.html">Overview</a>
           </li>
           <li class="nav-item">
@@ -96,7 +96,7 @@
           <li class="nav-item">
             <a class="nav-link" href="measure.html">Measure</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="learn.html">Learn</a>
           </li>
           <li class="nav-item">
@@ -125,9 +125,6 @@
         <li class="nav-item flex-sm-fill">
         <a id="KPIsummary-tab" data-toggle="tab" href="#KPIsummary" role="tab" aria-controls="KPIsummary" aria-selected="false" class="nav-link rounded-0">KPI Summary</a>
         </li>
-      <li class="nav-item flex-sm-fill">
-        <a id="features-tab" data-toggle="tab" href="#features" role="tab" aria-controls="features" aria-selected="false" class="nav-link rounded-0">Experiment Features</a>
-      </li>
     </ul>
     <div id="myTab2Content" class="tab-content tab-content-theme mb-5">
         <div id="expoverview" role="tabpanel" aria-labelledby="expoverview-tab" class="tab-pane fade p-0 show active bg-transparent">
@@ -304,7 +301,7 @@
               <div class="form-group">
                   <label>Type of Experiment</label>
                   <select class="form-control">
-                      <option value="Execution">Execution</option>
+                    <option value="Execution">Execution</option>
                   </select>
                 </div>
           </div>
@@ -325,8 +322,17 @@
           </div>
       </div>
 
-      <div class="row mt-3 mb-2">   
-          <div class="col-md-6 ml-auto text-right">
+      <div class="row mt-5 mb-2">   
+        <div class="col-md-6 ml-auto text-right">
+          <label class="measurefilter custom-xs-input mr-4">Date Range :
+              <input type="number" value="05" class="form-control d-inline-block" />
+              <select class="form-control w-auto">
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+              </select>
+        </label>
+        
               <label class="measurefilter custom-xs-input">Number of Attributes :
                   <input type="number" value="05" class="form-control d-inline-block" />
             </label>
@@ -341,60 +347,6 @@
            <div class="basicbarchart"></div>
           </div>
         </div>
-      </div>
-
-      <div id="features" role="tabpanel" aria-labelledby="features-tab" class="tab-pane fade p-0 bg-transparent">
-        <div class="row">   
-          <div class="col-md-4">
-              <div class="form-group">
-                  <label>Business Goals</label>
-                  <select class="form-control">
-                    <option value="Increment in Driver Earning">Increment in Driver Earning</option>
-                  </select>
-                </div>
-          </div>
-
-          <div class="col-md-4">
-              <div class="form-group">
-                  <label>Type of Experiment</label>
-                  <select class="form-control">
-                    <option value="Execution">Execution</option>
-                  </select>
-                </div>
-          </div>
-
-          <div class="col-md-4">
-              <div class="form-group">
-                  <label>Select Experiment</label>
-                  <select class="form-control">
-                    <option value="tass">TAAS</option>
-                    <option value="dynamic">Dynamic</option>
-                    <option value="fast delivery">Fast Delivery</option>
-                  </select>
-                </div>
-          </div>
-
-          <div class="col-md-12 text-center mt-2 metrichead">
-<h5>Primary Metric : Spark Order Share</h5>
-          </div>
-      </div>
-      
-      <div class="row mt-3 mb-2">   
-          <div class="col-md-6 ml-auto text-right">
-              <label class="measurefilter custom-xs-input">Number of Attributes :
-                  <input type="number" value="05" class="form-control d-inline-block" />
-            </label>
-            </div>
-      </div>
-
-       <div class="row">
-        <div class="col-md-6">
-         <div class="reversedbarchartfeatures"></div>
-        </div>
-        <div class="col-md-6">
-         <div class="basicbarchartfeatures"></div>
-        </div>
-      </div>
       </div>
     </div>
 

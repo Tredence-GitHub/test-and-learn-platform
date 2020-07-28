@@ -378,7 +378,7 @@ $(document).ready(function () {
   var reversedbarchartfeaturesoptions = {
     series: [{
       name: "Positive Lift",
-      data: [6.5, 5.3, 4.1, 3.7]
+      data: [4.1, 3.7, 3.1, 2.6]
   }],
   title: {
     text: 'Positive Lift %',
@@ -431,7 +431,7 @@ $(document).ready(function () {
     axisTicks: {
       show: false,
     },
-    categories: ['Avg Basket Size', 'Time to Store', 'Dropped Orders', 'Offer Acceptance'],
+    categories: ['Zone Category (Stable)', 'Zones Order Volume (High)', 'Urbanicity (Urban)', 'No. of Competitor in Zone (Low)'],
   },
   grid: {
     borderColor: 'transparent',
@@ -527,7 +527,7 @@ $(document).ready(function () {
   var basicbarchartfeaturesoptions = {
     series: [{
     name: "Negative Lift",
-    data: [3.2, 2.7, 2.1, 1.4]
+    data: [3.9,3.1,2.5,1.5]
   }],
     chart: {
       toolbar: {
@@ -555,7 +555,7 @@ $(document).ready(function () {
     axisTicks: {
       show: false,
     },
-    categories: ['CSAT delivery', 'Driver friendliness', 'Batch Units', 'Returned Orders'],
+    categories: ['Zone Category (Unstable)', 'No. of Competitor in Zone (High)', 'Urbanicity (Semi Urban)', 'Zones with High Order Volume'],
   },
   title: {
     text: 'Negative Lift %',

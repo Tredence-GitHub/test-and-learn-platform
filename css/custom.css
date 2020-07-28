@@ -1122,10 +1122,11 @@ color: #f35448;
 .custom-xs-input{
   font-size: 14px;
 }
-.custom-xs-input input{
-  width: 50px !important;
+.custom-xs-input input, .custom-xs-input select{
+  width: 50px;
   height: 30px;
   padding: 0 5px;
+  display: inline-block;
 }
 .metrichead h5{
   color: #ffca7d;
