@@ -595,6 +595,106 @@ $(document).ready(function () {
   };
   var basicbarchartfeatures = new ApexCharts(document.querySelector(".basicbarchartfeatures"), basicbarchartfeaturesoptions);
   basicbarchartfeatures.render();
+
+  var KPIlineoptions = {
+    series: [
+    {
+      name: "Test",
+      data: [92, 93, 94, 96, 97, 97, 98, 98]
+    },
+    {
+      name: "Control",
+      data: [89, 90, 91, 91, 92, 92, 90, 91]
+    }
+  ],
+    chart: {
+    height: 350,
+    type: 'line',
+    dropShadow: {
+      enabled: true,
+      color: '#000',
+      top: 18,
+      left: 7,
+      blur: 10,
+      opacity: 0.2
+    },
+    toolbar: {
+      show: false
+    }
+  },
+  colors: ['#0095ce', '#c9802a'],
+  dataLabels: {
+    enabled: true,
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  title: {
+    text: 'Spark Delivery Rate',
+    align: 'left',
+    style: {
+      fontWeight:  'normal',
+      color:  '#ffe2c0'
+    },
+  },
+  grid: {
+    borderColor: 'transparent',
+    row: {
+      colors: ['#2b3c46', 'transparent'], // takes an array which will be repeated on columns
+      opacity: 0.5
+    },
+  },
+  markers: {
+    size: 1
+  },
+  tooltip: {
+    enabled: true,
+    style: {
+      fontSize: '12px'
+    },
+    x: {
+      show: true,
+      format:'HH:mm'
+    },
+    y: {
+      formatter:(value) => `${value}`
+    },
+    marker: {
+      show: false,
+    },
+    theme:'dark'
+  },
+  xaxis: {
+    categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8'],
+    labels: {
+      style: {
+          colors: '#bfb09b'
+      },
+    }
+  },
+  yaxis: {
+    tickAmount: 8,
+    min: 85,
+    max: 100,
+    labels: {
+      style: {
+          colors: '#bfb09b'
+      },
+    }
+  },
+  legend: {
+    position: 'top',
+    horizontalAlign: 'right',
+    floating: true,
+    offsetY: -25,
+    offsetX: -5,
+    labels: {
+      colors: '#bfb09b'
+  },
+  }
+  };
+  var KPIlinechart = new ApexCharts(document.querySelector(".KPIlinechart"), KPIlineoptions);
+  KPIlinechart.render();
 });
 
 

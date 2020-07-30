@@ -1184,3 +1184,6 @@ color: #f35448;
   vertical-align: sub;
   padding: 0 3px;
 }
+tr.row-active{
+  background-color: rgb(127 88 30 / 0.2) !important;
+}
