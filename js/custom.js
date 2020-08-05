@@ -4,7 +4,9 @@ $(function () {
     clearBtn: true,
     format: "dd/mm/yyyy",
   });
+  $('#datepicker').datepicker({
 
+          });
   // FOR DEMO PURPOSE
   $("#reservationDate").on("change", function () {
     var pickedDate = $("input").val();
@@ -33,7 +35,7 @@ $(function () {
     });
   });
 
-  // Enable Disable Screen 2 
+  // Enable Disable Screen 2
   $(function () {
     $("[name=recommendnumber]").click(function () {
       $(".recommendnumber").hide();
@@ -72,7 +74,7 @@ $(function () {
     });
   });
 
-// Datatable 
+// Datatable
   $(function() {
     $(document).ready(function() {
       $('.zonelist').DataTable({
@@ -85,10 +87,31 @@ $(function () {
 
   $(function() {
     $(document).ready(function() {
-      $('.overview').DataTable({
+      $('#table2').DataTable();
+      $('#summary').DataTable({
         "paging":   true,
         "info":     false,
-        "searching" : true
+        "searching" : true,
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.footer()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
       });
     });
   });
@@ -265,7 +288,7 @@ $(document).ready(function () {
   },
   xaxis: {
     categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
-        
+
     labels: {
       style: {
         colors: '#bfb09b'
@@ -287,7 +310,7 @@ $(document).ready(function () {
       },
     }
   },
-  
+
   };
   var barchart = new ApexCharts(document.querySelector(".barchart"), baroptions);
   barchart.render();
@@ -773,4 +796,3 @@ $(() => {
 function redirectDesign() {
   location.replace("https://tredence-github.github.io/test-and-learn-platform/design.html")
 }
-

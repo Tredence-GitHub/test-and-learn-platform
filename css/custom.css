@@ -459,7 +459,7 @@ form .infodata span{
 }
 input.multiselect-search::-webkit-input-placeholder,
 input#reservationDate::-webkit-input-placeholder,
-input::-webkit-input-placeholder 
+input::-webkit-input-placeholder
 {
   font-size: 14px;
   color:#7f581e !important;
@@ -538,7 +538,7 @@ input[type=text], input[type=number], input[type=password], input[type=search], 
   font-size: 14px;
   height: 40px;
 }
-input:focus, select:focus, .btn-outline-theme:hover, 
+input:focus, select:focus, .btn-outline-theme:hover,
 textarea.focus,
 .btn-outline-theme:focus, .btn-outline-theme:active {
   color: #ffd79e !important;
@@ -551,7 +551,7 @@ textarea.focus,
   display: flow-root;
 }
 button:focus{
-  outline: none;  
+  outline: none;
 }
 .btn-group button {
   background-color: #646361;
@@ -619,7 +619,7 @@ button:focus{
   background-size: cover;
   color: #fff;
 }
-.categories .section-description { 
+.categories .section-description {
   margin-bottom: 4rem;
 }
 
@@ -865,7 +865,7 @@ border-top: 0;
   border-bottom: 1px solid #7f581e;
 } */
 .table-theme thead th{
-  color: #ffe2c0 
+  color: #ffe2c0
 }
 .table-theme input[type=text], .table-theme input[type=number], .table-theme select
 {
@@ -925,7 +925,7 @@ display: none;
   padding: 0 0 10px 0;
   line-height: 0.8;
   border-bottom: 1px solid hsla(32, 100%, 88%, 0.3);
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 .dash-progress-bar{
   background: rgba(255, 226, 192, 0.3);
@@ -964,17 +964,21 @@ display: none;
 }
 .info-card{
   color: #ffe2c0;
-  background: #2b3c46;
+  background: #51636d;
   margin: 0;
   border: none;
   padding: 15px;
+  border-left: .25rem solid #28a745!important;
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+  background-clip: border-box;
+  border-radius: .35rem;
 }
 .info-card i.placeholdericon {
   font-size: 30px;
   opacity: 0.3;
   position: absolute;
   top: 10px;
-  right: 25px; 
+  right: 25px;
 }
 .info-card h5{
     font-weight: 100;
@@ -986,7 +990,7 @@ display: none;
 .info-card h5 + span{
   font-size: 20px;
   opacity: 0.3;
-  font-weight: 500; 
+  font-weight: 500;
   line-height: 0.6;
 }
 .info-card h2{
@@ -1102,7 +1106,7 @@ color: #f35448;
 }
 .measurefilter .multiselect-container.dropdown-menu{
   right: 0;
-  left:auto !important; 
+  left:auto !important;
   transform: translate3d(0px, 38px, 0px) !important;
 }
 .multiselect-container.dropdown-menu{
@@ -1153,7 +1157,7 @@ color: #f35448;
   border-radius: 50%;
   display: inline-block;
   margin-right: 3px;
-}  
+}
 .customlegend ul li:first-child span:first-child{
   background: #f8538d;
 }
@@ -1186,4 +1190,105 @@ color: #f35448;
 }
 tr.row-active{
   background-color: rgb(127 88 30 / 0.2) !important;
+}
+
+.chart-area {
+    height: 190px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.info-card h5.ongoing{
+  font-weight: 400;
+    display: block;
+    padding-bottom: 40px;
+    color: #68ea86;
+}
+
+
+
+.info-card.orange{
+  border-left: .25rem solid #e44422!important;
+}
+.info-card.green{
+ border-left: .25rem solid #28a745!important;
+}
+.info-card.green h5{
+  font-weight: 400;
+    display: block;
+    padding-bottom: 40px;
+    color: #68ea86;
+}
+
+
+.info-card.blue{
+  border-left: .25rem solid #0fc0dc!important;
+}
+.info-card.blue h5{
+  font-weight: 400;
+    display: block;
+    padding-bottom: 40px;
+    color: #0fc0dc;
+}
+
+.info-card.orange h5{
+  font-weight: 400;
+    display: block;
+    padding-bottom: 40px;
+    color: #ff7457;
+}
+
+
+.info-card.orange2{
+  border-left: .25rem solid #ffc107!important;
+}
+.info-card.orange2 h5{
+  font-weight: 400;
+    display: block;
+    padding-bottom: 40px;
+    color: #ffc107;
+}
+.top-title-bar{
+  font-weight: 100;
+  border-bottom: 1px solid #ffffff26;
+  display: block;
+  width: 100%;
+margin-bottom: 20px;
+  padding: 10px;
+}
+.top-title-bar h5{
+  font-weight: 100;
+  color: #ffffff8f;
+}
+.dashboard-block .custom-table-title h4 {
+  border-bottom: none;
+      font-weight: 400;
+      margin-bottom: 0;
+      padding-top: 7px;
+}
+.dashboard-block .custom-table-title .input-group-text {
+    border: none;
+    background: transparent;
+    color: #c37c29;
+}
+
+.overview-table {
+    padding: 0;
+    background: #22313a;
+}
+#summary_wrapper{
+  padding: 15px;
+}
+.custom-table-title{
+  border-bottom: none;
+  padding-bottom: 12px;
+  padding-top: 15px;
+  margin: 0;
+  margin-bottom: 20px;
+  background: #2b3c46;
+}
+
+.sparkGrapgh{
+  background: #ffffff2b;
+    padding: 30px;
 }
