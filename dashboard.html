@@ -276,10 +276,10 @@
       <div id="KPIsummary" role="tabpanel" aria-labelledby="KPIsummary-tab" class="tab-pane fade p-0 bg-transparent dashboard-block">
         <div class="overview-table">
         <div class='row custom-table-title'>
-          <div class='col-6'>
+          <div class='col-2'>
             <h4>KPI Summary</h4>
           </div>
-          <div class='col-6'>
+          <div class='col-10'>
             <div class='d-flex justify-content-between'>
                <div>
                  <label class="sr-only" for="inlineFormInputGroupUsername">Business Goals</label>
@@ -304,17 +304,18 @@
                   </select>
                  </div>
                </div>
+             
                <div>
                  <label class="sr-only" for="inlineFormInputGroupUsername">Period</label>
                  <div class="input-group">
 
-                   <div class="datepicker date input-group p-0 shadow-sm mb-0">
+                   <div class="datepicker date input-group p-0 mb-0">
                      <div class="input-group-prepend">
                        <div class="input-group-text">Period </div>
                      </div>
                        <input
                          type="text"
-                         placeholder="14/04/2020"
+                         placeholder="Start Date"
                          class="form-control"
                          id="reservationDate"
                        />
@@ -324,10 +325,37 @@
                          ></span>
                        </div>
                  </div>
+
+                 
                  </div>
                </div>
-             </div>
+            
+               <div>
+                <label class="sr-only" for="inlineFormInputGroupUsername">Period</label>
+                <div class="input-group">
 
+                  <div class="datepicker date input-group p-0 mb-0">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">&nbsp; </div>
+                    </div>
+                      <input
+                        type="text"
+                        placeholder="End Date"
+                        class="form-control"
+                        id="reservationDate"
+                      />
+                      <div class="input-group-append">
+                        <span class="input-group-text px-4"
+                          ><i class="fa fa-calendar"></i
+                        ></span>
+                      </div>
+                </div>
+
+                
+                </div>
+              </div>
+
+              </div>
           </div>
 
 

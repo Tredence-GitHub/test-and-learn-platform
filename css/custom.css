@@ -354,7 +354,8 @@ padding: 10px;
     margin-bottom: 4px;
 }
 .tab-title{
-	    font-weight: 400;
+      font-weight: 400;
+      margin: 8px 0;
 }
 .progress-bar{
 	    height: 4px;
@@ -372,7 +373,8 @@ padding: 10px;
     height: 100%;
 }
 .tab-desc{
-	    font-size: 12px;
+      font-size: 12px;
+      display: none;
 }
 .left-nav-bar .p-3 {
     padding: 0.8rem!important;
@@ -1218,6 +1220,7 @@ tr.row-active{
     display: block;
     padding-bottom: 40px;
     color: #68ea86;
+    line-height: 1.2;
 }
 
 
@@ -1229,6 +1232,7 @@ tr.row-active{
     display: block;
     padding-bottom: 40px;
     color: #0fc0dc;
+    line-height: 1.2;
 }
 
 .info-card.orange h5{
@@ -1236,6 +1240,7 @@ tr.row-active{
     display: block;
     padding-bottom: 40px;
     color: #ff7457;
+    line-height: 1.2;
 }
 
 
@@ -1247,6 +1252,7 @@ tr.row-active{
     display: block;
     padding-bottom: 40px;
     color: #ffc107;
+    line-height: 1.2;
 }
 .top-title-bar{
   font-weight: 100;
@@ -1271,7 +1277,11 @@ margin-bottom: 20px;
     background: transparent;
     color: #c37c29;
 }
-
+.dashboard-block .custom-table-title span.input-group-text{
+  color: #ffe2c0;
+  background-color: #7f581e;
+  border: 1px solid #7f581e;
+}
 .overview-table {
     padding: 0;
     background: #22313a;
